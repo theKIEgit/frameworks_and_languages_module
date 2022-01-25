@@ -2,7 +2,7 @@
 openapi: '3.0.2'
 info:
   title: FreeCycle
-  version: '0.0'
+  version: '0.1'
   description: |
     FreeCycle your old stuff - keep things out of landfill
 
@@ -38,7 +38,8 @@ x-tagGroups:
 servers:
   - url: //api.server.test/v1
     description: The deployed url of the api. Currently it is not hosted externally.
-  
+
+## TODO CORS headers  
 
 paths:
   '/item/':
@@ -82,8 +83,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Item'
-        '400':
-          description: Invalid ID supplied
         '404':
           description: Item not found
 
@@ -94,8 +93,8 @@ paths:
       description: Remove an item by itemID
       operationId: deleteItem
       responses:
-        '400':
-          description: Invalid itemID
+        '404':
+          description: Item not found
         '204':
           description: Ok
 
@@ -167,19 +166,19 @@ paths:
                   $ref: '#/components/schemas/Item'
                 #maxItems: 10
               #TODO: consider pagination?
-  '/keywords/':
-    get:
-      tags:
-        - keywords
-      operationId: getKeywords
-      summary: gets a list of all the keywords currently in use in the system across all Items
-      responses:
-        '200':
-          description: keyword list
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Keywords'
+  # '/keywords/':
+  #   get:
+  #     tags:
+  #       - keywords
+  #     operationId: getKeywords
+  #     summary: gets a list of all the keywords currently in use in the system across all Items
+  #     responses:
+  #       '200':
+  #         description: keyword list
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Keywords'
 
 components:
   examples:
