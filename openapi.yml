@@ -23,10 +23,10 @@ info:
 tags:
   - name: item
     description: An item that is advertised
-  - name: item_model
-    x-displayName: The item model
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/Item" />
+  #- name: item_model
+  #  x-displayName: The item model
+  #  description: |
+  #    <SchemaDefinition schemaRef="#/components/schemas/Item" />
 
 x-tagGroups:
   - name: General
@@ -42,6 +42,23 @@ servers:
 ## TODO CORS headers  
 
 paths:
+
+  '/':
+    get:
+      tags:
+        - root
+      summary: Human readable html hello page
+      description: Used for a human to known the service is working
+      operationId: root
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+                example: <html><body>Your HTML text</body></html>
+
   '/item/':
     post:
       tags:
