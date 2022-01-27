@@ -24,14 +24,17 @@ tags:
   #  x-displayName: The item model
   #  description: |
   #    <SchemaDefinition schemaRef="#/components/schemas/Item" />
+  - name: root
+    description: root resources
 
 x-tagGroups:
   - name: General
     tags:
       - item
-  - name: Models
-    tags:
-      - item_model
+      - root
+  #- name: Models
+  #  tags:
+  #    - item_model
 servers:
   - url: //api.server.test/v1
     description: The deployed url of the api. Currently it is not hosted externally.
