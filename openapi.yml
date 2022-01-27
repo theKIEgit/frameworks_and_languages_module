@@ -47,7 +47,7 @@ paths:
     get:
       tags:
         - root
-      summary: Human readable html hello page
+      summary: Human readable html 'hello' page
       description: Used for a human to known the service is working
       operationId: root
       responses:
@@ -99,7 +99,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Item'
         '405':
-          description: Invalid input
+          description: Invalid input - some input fields may be missing
   '/item/{itemId}/':
     parameters:
       - name: itemId
@@ -193,8 +193,9 @@ paths:
       tags:
         - item
       operationId: findItemsByQuery
-      summary: List items from search criteria
-      description: Get a list of items matching the search/query criteria
+      summary: List multiple items
+      description: Get a list of all items or optionally filter from query string criteria.
+        This needs to be improved to support pagination in future.
       responses:
         '200':
           description: get list of items matching query
