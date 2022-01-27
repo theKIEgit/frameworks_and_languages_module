@@ -55,8 +55,6 @@ paths:
           description: OK
           content:
             text/html:
-              schema:
-                type: string
                 example: <html><body>Your HTML text</body></html>
 
     options:
