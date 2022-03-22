@@ -1,0 +1,22 @@
+
+services:
+
+  python:
+    build:
+      context: ./http_server_python
+    volumes:
+      - ./:/data/
+    command:
+      - /data/
+    ports:
+      - 8001:8000
+
+  java:
+    build:
+      context: ./http_server_java
+    volumes:
+      - ./:/data/
+    command:
+      - /data/
+    ports:
+      - 8002:8000
