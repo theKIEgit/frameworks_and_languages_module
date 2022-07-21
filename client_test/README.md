@@ -9,7 +9,7 @@ https://github.com/bahmutov/cypress-open-from-docker-compose
 
 The official images seem to have the same reports problem from 3 years ago - maybe some of my old hacks will help
 
-why is cypress/included:8.3.0 3GB!?
+why is cypress/included:10.3.0 3GB!?
 
 ```cmd
     # ADMIN

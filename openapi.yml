@@ -108,8 +108,7 @@ paths:
         required: true
         #deprecated: true
         schema:
-          type: integer
-          format: int64
+          $ref: '#/components/schemas/Id'
     get:
       tags:
         - item

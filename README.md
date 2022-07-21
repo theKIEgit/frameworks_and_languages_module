@@ -6,6 +6,8 @@ Stub framework for "Frameworks and Languages" module
 * [ReDoc OpenAPI](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/calaldees/frameworks_and_languages_module/main/openapi.yml)
 
 
+* [redocly -> openapi.yml](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/calaldees/frameworks_and_languages_module/main/openapi.yml)
+
 Project Idea: Freecycle with lat/lon?
 
 TODO:
