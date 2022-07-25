@@ -9,7 +9,7 @@ https://github.com/bahmutov/cypress-open-from-docker-compose
 
 The official images seem to have the same reports problem from 3 years ago - maybe some of my old hacks will help
 
-why is cypress/included:10.3.0 3GB!?
+why is `cypress/included` 3GB!?
 
 ```cmd
     # ADMIN
@@ -18,5 +18,6 @@ why is cypress/included:10.3.0 3GB!?
     npm install cypress
 
     set CYPRESS_BASE_URL=http://localhost:8001/?api=http://localhost:8000
-    npx cypress open
+    npx cypress open --e2e --browser electron
+    # always fails on first installed run
 ```

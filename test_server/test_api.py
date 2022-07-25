@@ -148,7 +148,7 @@ def get_items(ENDPOINT):
     return _get_items
 
 
-def test_item_post_in_items(ENDPOINT, item_factory):
+def test_item_items_contains_from_post(ENDPOINT, item_factory):
     """
     Create new_item and check that it appears in the items list
     """
