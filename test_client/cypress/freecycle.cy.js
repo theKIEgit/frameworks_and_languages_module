@@ -53,7 +53,7 @@ describe('FreeCycle', () => {
 		cy.contains('freecycle', { matchCase: false })
 	})
 
-	it('root page contains input fields and submit button', () => {
+	it('contains input fields and submit button', () => {
 		cy.item_field_entry({
 			user_id: 'test',
 			lat: 'test',
@@ -63,6 +63,20 @@ describe('FreeCycle', () => {
 			keywords: 'test',
 		})
 		cy.get(`[data-action="create_item"]`).filter(':visible')
+	})
+
+	it('post results in item visible', () => {
+		cy.contains('this should be visible').should('not.exist')
+		cy.item_field_entry({
+			user_id: 'test',
+			lat: '1',
+			lon: '1',
+			description: 'this should be visible',
+			image: 'http://placekitten.com/100/101',
+			keywords: 'test',
+		})
+		cy.get(`[data-action="create_item"]`).filter(':visible').click()
+		cy.contains('this should be visible').should('exist')
 	})
 
 	it('Create and Delete Item', () => {
