@@ -1,8 +1,10 @@
 name: test_client
 
 on:
+  #- workflow_dispatch  # Disable running on every commit because this job downloaded a 4gb image and github actions 
   push:
     paths:
+      - '.git/workflows/test_example_client.yml'
       - 'client/**'
       - 'test_client/**'
 
