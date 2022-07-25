@@ -64,7 +64,7 @@ paths:
       tags:
         - root
       responses:
-        200:
+        204:
           description: Default response for CORS method
           headers:
             Access-Control-Allow-Origin:
@@ -75,10 +75,10 @@ paths:
               schema:
                 type: string
                 example: "POST, GET, OPTIONS, DELETE"
-            Access-Control-Allow-Headers:
-              schema:
-                type: string
-                example: Content-Type
+            #Access-Control-Allow-Headers:
+            #  schema:
+            #    type: string
+            #    example: Content-Type
           content: {}
 
 
@@ -132,10 +132,11 @@ paths:
       description: Remove an item by itemID
       operationId: deleteItem
       responses:
-        '404':
+        404:
           description: Item not found
-        '204':
+        204:
           description: Ok
+          content: {}
 
   '/items/':
     parameters:

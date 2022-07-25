@@ -148,7 +148,18 @@ def get_items(ENDPOINT):
     return _get_items
 
 
-def test_item_items_contains_from_post(ENDPOINT, item_factory):
+def test_item_contains_valid_iso_date_from(ENDPOINT, item_factory):
+    """
+    date_from has been created and is a pauseable ISO datetime
+    """
+    new_item = item_factory()
+    response = requests.get(f"{ENDPOINT}/item/{new_item['id']}")
+    date_from = datetime.datetime.fromisoformat(response.json()['date_from'])
+    assert date_from
+    assert date_from.date() == datetime.datetime.now().date(), "an item that has just been created should have today's date"
+
+
+def test_items_contains_from_post(ENDPOINT, item_factory):
     """
     Create new_item and check that it appears in the items list
     """
