@@ -20,7 +20,7 @@ jobs:
         if: always()
         with:
           name: cypress
-          path: test_client/reports/
+          path: test_server/reports/
           retention-days: 5
 
       # https://github.com/marketplace/actions/test-reporting
