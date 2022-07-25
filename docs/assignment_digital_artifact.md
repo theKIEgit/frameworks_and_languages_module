@@ -59,7 +59,6 @@ The repository provides:
 Server Tests
 ------------
 
-
 Port open
 serves html on root
 POST
@@ -86,28 +85,42 @@ NEAR
 
 16 marks
 
-5 marks for
+5 marks for?
 Use of framework
 File/folder structure (sensible names)
 Use of language features (list comprehensions, async etc)
 Conciseness (verbose? unneed intermediaries? readable)
 
-README sufficent to launch + test
-Commits strutured
-Comments in code describe
-Reference snippets/tutorial urls inline
+
+Documentation
+README sufficient to explain, launch, test  (1 mark)
+Comments in code describe/explain (1 mark)
+minimum 24+ Commits structured (1 mark) [automate]
+minimum 4x Reference snippets/tutorial urls inline (1 mark) [automate]
 
 
 Client Tests
 ------------
 
-200
-has Freecycle
-has Text input * 4
-submit + see item (8 marks)
-has delete
-delete + remove (2marks)
-displays real image
+200 (1 mark)
+has Freecycle (1 mark)
+has Text input and button (2 mark)
+submit + see item (6 marks)
+delete + remove (4 marks)
 
-15 Marks (1 mark short)
+todo: has real image?
 
+
+Visual framework
+----------------
+
+no framework == 0 marks (even if it looks nice)
+
+Navbar 2
+
+styled
+ input 2
+ buttons 1
+
+item/card 2
+Responsive to mobile 3
