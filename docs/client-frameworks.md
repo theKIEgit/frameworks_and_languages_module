@@ -110,7 +110,7 @@ Interacting with our API from client browser javascript
 // Open a blank browser tab and bring up devtools (F12)
 // Copy and paste the code below
 //   These are javascript equivalent of `curl` statesmen's from previous session
-// Start server_example api
+// Start example_server api
 // Set `urlAPI` to your server address. It MUST not end with a `/`
 // TASK: using the devtools console
 //   - add 3 items

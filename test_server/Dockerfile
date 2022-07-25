@@ -1,6 +1,6 @@
-FROM python:slim
+FROM python:alpine
 
-WORKDIR /app/
+WORKDIR /pytest/
 
 COPY requirements.txt ./
 RUN pip install -r requirements.txt

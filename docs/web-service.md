@@ -163,14 +163,14 @@ Automated Tests and CI
 
 ```bash
 # Start a second terminal and drag to a second columb
-# Run server_example with
+# Run example_server with
 make run_example_server
 # or
-cd server_example && python3 main.py
+cd example_server && python3 main.py
 ```
 ```bash
 # Start a second terminal and drag to a second column
-cd server_test
+cd test_server
 pip install pytest
 
 # run all tests

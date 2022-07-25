@@ -11,10 +11,13 @@ help:	## display this help
 	# deafult server port 8000
 	# default client port 8001
 
+.PHONY: run run_example_server_client run example_server test_server test_client test_example_server test_example_client cypress cypress_cmd
+
 run:  ##
 	${DOCKER_COMPOSE} up --build
-run_example:  ## run example server and client containers
+run_example_server_client:  ## run example server and client containers
 	${DOCKER_COMPOSE_EXAMPLE} up --build
+	# visit http://localhost:8001?api=http://localhost:8000
 run_example_server:  ##
 	${DOCKER_COMPOSE} --file docker-compose.example.server.yml up --build server
 		## run --rm server /bin/sh
@@ -25,26 +28,26 @@ run_example_server:  ##
 #	${DOCKER_COMPOSE_TEST} up --build
 #	${DOCKER_COMPOSE_TEST} down
 test_server:  ##
-	${DOCKER_COMPOSE_TEST} up --build server_test
+	${DOCKER_COMPOSE_TEST} up --build test_server
 	${DOCKER_COMPOSE_TEST} down
 test_client:  ##
-	${DOCKER_COMPOSE_TEST} up --build client_test
+	${DOCKER_COMPOSE_TEST} up --build test_client
 	${DOCKER_COMPOSE_TEST} down
 
 #test_example:  ##
 #	${DOCKER_COMPOSE_EXAMPLE_TEST} up
 #	${DOCKER_COMPOSE_EXAMPLE_TEST} down
 test_example_server:  ##
-	${DOCKER_COMPOSE_EXAMPLE_TEST} up --build server_test
+	${DOCKER_COMPOSE_EXAMPLE_TEST} up --build test_server
 	${DOCKER_COMPOSE_EXAMPLE_TEST} down
 test_example_client:  ##
-	${DOCKER_COMPOSE_EXAMPLE_TEST} up --build client_test
+	${DOCKER_COMPOSE_EXAMPLE_TEST} up --build test_client
 	${DOCKER_COMPOSE_EXAMPLE_TEST} down
 
 cypress:  ## Launch local cypress from container (requires an XServer and DISPLAY env)
-	${DOCKER_COMPOSE_EXAMPLE_TEST} run --rm --env DISPLAY client_test open --project .
+	${DOCKER_COMPOSE_EXAMPLE_TEST} run --rm --env DISPLAY test_client open --project .
 	${DOCKER_COMPOSE_EXAMPLE_TEST} down
 cypress_cmd:
 	${_DOCKER_COMPOSE} --file docker-compose.cypress.yml \
-		run --rm client_test \
+		run --rm test_client \
 			${CYPRESS_CMD}

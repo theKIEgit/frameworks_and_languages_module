@@ -1,5 +1,5 @@
 services:
-  client_test:
+  test_client:
     image: cypress/included:10.3.0
     working_dir: /tests
     volumes:
@@ -7,9 +7,9 @@ services:
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
       # mount tests - readonly
-      - ${PWD}/client_test/cypress.config.js:/tests/cypress.config.js:ro
-      - ${PWD}/client_test/cypress:/tests/cypress:ro
+      - ${PWD}/test_client/cypress.config.js:/tests/cypress.config.js:ro
+      - ${PWD}/test_client/cypress:/tests/cypress:ro
       # mount reports - writeable
-      - ${PWD}/client_test/reports:/tests/reports:rw
+      - ${PWD}/test_client/reports:/tests/reports:rw
     entrypoint: ["cypress"]
     command: ["run"]

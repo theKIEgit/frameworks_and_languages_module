@@ -5,7 +5,7 @@ Server Frameworks
 * Understand how to follow a tutorial to run "Hello World" for a range of server side frameworks
 * Understand a range of server frameworks features
     1. To justify your choice of server framework (assignment 1)
-    2. To critique the missing features of the `server_example` (assignment 1)
+    2. To critique the missing features of the `example_server` (assignment 1)
 
 ### Tasks for next week
 1. Use a server framework

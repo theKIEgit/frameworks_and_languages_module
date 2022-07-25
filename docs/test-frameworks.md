@@ -113,13 +113,13 @@ def test_delete_post_1():
 ### Task: Run individual tests for this project
 ```bash
 # Run server on :8000
-cd server_example
+cd example_server
 make run_local
 
 # -- separate terminal
 
 # Run tests
-cd server_test
+cd test_server
 pytest test_api.py::test_items_has_posted_item
 ```
 

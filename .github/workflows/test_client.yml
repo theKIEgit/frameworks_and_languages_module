@@ -1,10 +1,10 @@
-name: Client Test Example
+name: test_client
 
 on:
   push:
     paths:
-      - 'client_example/**'
-      - 'client_test/**'
+      - 'client/**'
+      - 'test_client/**'
 
 jobs:
   test:
@@ -14,4 +14,4 @@ jobs:
     - uses: actions/checkout@main
     # Temp Disable on CI - the cypress container is 3GB
     #- name: Build and Test
-    #  run: make test_example_client
+    #  run: make test_client

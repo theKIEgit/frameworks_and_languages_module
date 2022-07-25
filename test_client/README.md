@@ -14,7 +14,7 @@ why is cypress/included:10.3.0 3GB!?
 ```cmd
     # ADMIN
     choco install nodejs
-    # in client_test dir
+    # in test_client dir
     npm install cypress
 
     set CYPRESS_BASE_URL=http://localhost:8001/?api=http://localhost:8000

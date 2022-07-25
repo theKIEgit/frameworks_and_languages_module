@@ -1,4 +1,4 @@
-DOCKER_IMAGE:=server_example
+DOCKER_IMAGE:=example_server
 
 run_local:
 	python3 main.py

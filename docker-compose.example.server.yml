@@ -3,6 +3,6 @@
 services:
 
   server:
-    image: server_example
+    image: example_server
     build:
-      context: ./server_example/
+      context: ./example_server/
