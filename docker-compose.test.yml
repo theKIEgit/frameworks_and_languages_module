@@ -2,15 +2,17 @@
 
 services:
 
-  server_test:
+  test_server:
     build:
-      context: ./server_test/
+      context: ./test_server/
     environment:
       URI_SERVER: http://server:8000
+    volumes:
+      - ${PWD}/test_server/reports:/pytest/reports:rw
     links:
         - server
 
-  client_test:
+  test_client:
     links:
         - server
         - client

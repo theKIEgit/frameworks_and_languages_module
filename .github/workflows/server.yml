@@ -1,4 +1,4 @@
-name: Server
+name: server
 
 on:
   push:
@@ -11,11 +11,12 @@ defaults:
 
 jobs:
   test:
-    name: Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
-    - name: Build
-      run: make build
-    - name: Test
-      run: make test
+      - uses: actions/checkout@main
+      
+      - name: make build
+        run: make build
+
+      - name: make test
+        run: make test

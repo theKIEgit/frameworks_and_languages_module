@@ -1,23 +1,20 @@
-name: client
+name: example_server
 
 on:
   push:
     paths:
-      - 'client/**'
+      - 'example_server/**'
 
 defaults:
   run:
-    working-directory: client
+    working-directory: example_server
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-
       - uses: actions/checkout@main
-      
       - name: make build
         run: make build
-
       - name: make test
         run: make test

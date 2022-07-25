@@ -3,6 +3,6 @@
 services:
 
   client:
-    image: client_example
+    image: example_client
     build:
-      context: ./client_example/
+      context: ./example_client/

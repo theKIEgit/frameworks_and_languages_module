@@ -1,0 +1,17 @@
+name: test_client
+
+on:
+  push:
+    paths:
+      - 'client/**'
+      - 'test_client/**'
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    # Temp Disable on CI - the cypress container is 3GB
+    #- name: Build and Test
+    #  run: make test_client

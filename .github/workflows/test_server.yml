@@ -1,0 +1,16 @@
+name: test_server
+
+on:
+  push:
+    paths:
+      - 'server/**'
+      - 'test_server/**'
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: make test_server
+      run: make test_server
