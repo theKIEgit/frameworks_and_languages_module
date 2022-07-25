@@ -1,9 +1,9 @@
 """
-These tests are deliberately constucted for a learning activity.
+These tests are deliberately constructed for a learning activity.
 There are lots of repeated patters that are design for a learner to see graduated progress.
 As they construct more functionality, more tests should pass.
 
-Profetional test would not be written like this.
+Professional test would not be written like this.
 """
 
 import random
@@ -42,6 +42,83 @@ def new_item(ENDPOINT):
     yield response.json()
 
 
+def test_root(ENDPOINT):
+    """
+    Base endpoint should return html of some form to the user.
+    """
+    response = requests.get(ENDPOINT)
+    assert response.status_code == 200
+    assert 'text/html' in response.headers['Content-type']
+    assert response.text
+
+def test_item_post_405(ENDPOINT):
+    ITEM = {
+        "a": 1,
+        "b": 2,
+    }
+    response = requests.post(ENDPOINT + '/item', json=ITEM)
+    assert response.status_code == 405
+
+def test_item_post_201(ENDPOINT):
+    ITEM = {
+        'user_id': "user1234",
+        'keywords': ["hammer", "nails", "tools"],
+        "description": "A hammer and nails set. In canterbury",
+        "lat": 51.2798438,
+        "lon": 1.0830275,
+    }
+    response = requests.post(f'{ENDPOINT}/item', json=ITEM)
+    assert response.status_code == 201
+    assert 'application/json' in response.headers.get('Content-type')
+    assert response.json().get('id')
+
+def test_item_get_200(ENDPOINT, new_item):
+    response = requests.get(f"{ENDPOINT}/item/{new_item['id']}")
+    assert response.status_code == 200
+    assert response.json() == new_item
+
+def test_item_get_404(ENDPOINT):
+    response = requests.get(f"{ENDPOINT}/item/99999999")
+    assert response.status_code == 404
+
+def test_items_get_200(ENDPOINT):
+    """
+    /items responds with list
+    """
+    response = requests.get(f"{ENDPOINT}/items")
+    assert response.status_code == 200
+    items = response.json()
+    assert isinstance(items, list)
+
+def test_item_delete_404(ENDPOINT):
+    response = requests.delete(f"{ENDPOINT}/item/99999999")
+    assert response.status_code == 404
+
+def test_item_delete(ENDPOINT, new_item):
+    url = f"{ENDPOINT}/item/{new_item['id']}"
+    response = requests.get(url)
+    assert response.status_code == 200
+    response = requests.delete(url)
+    assert response.status_code == 204
+    response = requests.get(url)
+    response.status_code == 404
+
+def test_root_options_cors_headers(ENDPOINT):
+    """
+    Server must respond to OPTIONS request for use with real browser
+    """
+    response = requests.options(ENDPOINT)
+    assert response.status_code == 204
+    assert 'POST' in response.headers['Access-Control-Allow-Methods']
+    #assert 'Content-Type' in response.headers['Access-Control-Allow-Headers']  # Investigate why this was needed - this is not part of express.js default CORS handling? BLAME?
+
+def test_items_get_cors_headers(ENDPOINT):
+    response = requests.options(f"{ENDPOINT}/items")
+    assert response.headers['Access-Control-Allow-Origin'], 'CORS Headers must be set - preferably to * for this learning exercise'
+
+
+# Advanced Tests ---------------------------------------------------------------
+
 @pytest.fixture
 def item_factory(ENDPOINT):
     _item_ids = set()
@@ -63,89 +140,15 @@ def item_factory(ENDPOINT):
         response = requests.delete(ENDPOINT + f"/item/{_id}")
         assert response.status_code == 204
 
-
-def test_options(ENDPOINT):
-    """
-    Server must respond to OPTIONS request for use with real browser
-    """
-    response = requests.options(ENDPOINT)
-    assert response.status_code == 204
-    assert 'POST' in response.headers['Access-Control-Allow-Methods']
-    #assert 'Content-Type' in response.headers['Access-Control-Allow-Headers']  # Investigate why this was needed - this is not part of express.js default CORS handling? BLAME?
+@pytest.fixture
+def get_items(ENDPOINT):
+    def _get_items(**kwargs):
+        kwargs = {k:v if not isiterable(v) else ','.join(v) for k,v in kwargs.items()}  # encode arrays as comma separated
+        return requests.get(ENDPOINT + f"/items?" + urllib.parse.urlencode(kwargs)).json()
+    return _get_items
 
 
-def test_index(ENDPOINT):
-    """
-    Base endpoint should return html of some form to the user.
-    """
-    response = requests.get(ENDPOINT)
-    assert response.status_code == 200
-    assert 'text/html' in response.headers['Content-type']
-    assert response.text
-
-
-def test_item_post_missing_fields(ENDPOINT):
-    ITEM = {
-        "a": 1,
-        "b": 2,
-    }
-    response = requests.post(ENDPOINT + '/item', json=ITEM)
-    assert response.status_code == 405
-
-
-def test_item_post(ENDPOINT):
-    ITEM = {
-        'user_id': "user1234",
-        'keywords': ["hammer", "nails", "tools"],
-        "description": "A hammer and nails set. In canterbury",
-        "lat": 51.2798438,
-        "lon": 1.0830275,
-    }
-    response = requests.post(ENDPOINT + '/item', json=ITEM)
-    assert response.status_code == 201
-    assert 'application/json' in response.headers.get('Content-type')
-    assert response.json().get('id')
-
-
-def test_item_get(ENDPOINT, new_item):
-    url = ENDPOINT + f"/item/{new_item['id']}"
-    response = requests.get(url)
-    assert response.status_code == 200
-    assert response.json() == new_item
-
-
-def test_item_delete_invalid_item(ENDPOINT):
-    _id = 99999999999
-    url = ENDPOINT + f"/item/{_id}"
-    response = requests.get(url)
-    assert response.status_code == 404
-    response = requests.delete(url)
-    assert response.status_code == 404
-
-
-def test_item_delete(ENDPOINT, new_item):
-    url = ENDPOINT + f"/item/{new_item['id']}"
-    response = requests.get(url)
-    assert response.status_code == 200
-    response = requests.delete(url)
-    assert response.status_code == 204
-    response = requests.get(url)
-    response.status_code == 404
-
-
-def test_items(ENDPOINT):
-    """
-    /items responds with list
-    """
-    url = ENDPOINT + f"/items"
-    response = requests.get(url)
-    assert response.status_code == 200
-    assert response.headers['Access-Control-Allow-Origin'], 'CORS Headers must be set - preferably to * for this learning exercise'
-    items = response.json()
-    assert isinstance(items, list)
-
-
-def test_items_has_posted_item(ENDPOINT, item_factory):
+def test_item_post_in_items(ENDPOINT, item_factory):
     """
     Create new_item and check that it appears in the items list
     """
@@ -153,14 +156,6 @@ def test_items_has_posted_item(ENDPOINT, item_factory):
     response = requests.get(ENDPOINT + f"/items")
     item_ids = tuple(item['id'] for item in response.json())
     assert new_item['id'] in item_ids
-
-
-@pytest.fixture
-def get_items(ENDPOINT):
-    def _get_items(**kwargs):
-        kwargs = {k:v if not isiterable(v) else ','.join(v) for k,v in kwargs.items()}  # encode arrays as comma separated
-        return requests.get(ENDPOINT + f"/items?" + urllib.parse.urlencode(kwargs)).json()
-    return _get_items
 
 
 def test_items_filter_username(get_items, item_factory):
