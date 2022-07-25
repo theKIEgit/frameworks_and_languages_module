@@ -21,8 +21,6 @@ run_example_server_client:  ## run example server and client containers
 run_example_server:  ##
 	${DOCKER_COMPOSE} --file docker-compose.example.server.yml up --build server
 		## run --rm server /bin/sh
-#run_example_client:  ##
-#	${DOCKER_COMPOSE} --file docker-compose.example.client.yml up
 
 #test:  ##
 #	${DOCKER_COMPOSE_TEST} up --build
@@ -44,10 +42,25 @@ test_example_client:  ##
 	${DOCKER_COMPOSE_EXAMPLE_TEST} up --build test_client
 	${DOCKER_COMPOSE_EXAMPLE_TEST} down
 
-cypress:  ## Launch local cypress from container (requires an XServer and DISPLAY env)
+cypress_gui:  ## Launch local cypress from container (requires an XServer and DISPLAY env)
 	${DOCKER_COMPOSE_EXAMPLE_TEST} run --rm --env DISPLAY test_client open --project . --e2e --browser electron 
 	${DOCKER_COMPOSE_EXAMPLE_TEST} down
 cypress_cmd:
+	# Use with `CYPRESS_CMD="stuff" make cypress_cmd`
 	${_DOCKER_COMPOSE} --file docker-compose.cypress.yml \
 		run --rm test_client \
 			${CYPRESS_CMD}
+
+
+# Combine 
+
+run_example_client_with_your_server:  ##
+	${DOCKER_COMPOSE} --file docker-compose.example.client.yml up --build
+run_your_client_with_example_server:  ##
+	${DOCKER_COMPOSE} --file docker-compose.example.server.yml up --build
+test_your_client_with_example_server:  ##
+	${DOCKER_COMPOSE_TEST} --file docker-compose.example.server.yml up --build test_client
+	${DOCKER_COMPOSE_TEST} down
+test_example_client_with_your_server:  ##
+	${DOCKER_COMPOSE_TEST} --file docker-compose.example.client.yml up --build test_client
+	${DOCKER_COMPOSE_TEST} down
