@@ -3,7 +3,7 @@ name: test_example_server
 on:
   push:
     paths:
-      - '.git/workflows/test_example_server.yml'
+      - '.github/workflows/test_example_server.yml'
       - 'example_server/**'
       - 'test_server/**'
 

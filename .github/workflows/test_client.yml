@@ -4,7 +4,7 @@ on:
   #- workflow_dispatch  # Disable running on every commit because this job downloaded a 4gb image and github actions 
   push:
     paths:
-      - '.git/workflows/test_example_client.yml'
+      - '.github/workflows/test_example_client.yml'
       - 'client/**'
       - 'test_client/**'
 
@@ -13,7 +13,6 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
-    # Temp Disable on CI - the cypress container is 3GB
-    #- name: Build and Test
-    #  run: make test_client
+      - uses: actions/checkout@main
+      # Temp Disable on CI - the cypress container is 3GB
+      #- run: make test_client
