@@ -12,23 +12,23 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@main
+      #- name: checkout
+      - uses: actions/checkout@main
 
-      - name: make test_example_client
-        run: make test_example_client
+      #- name: make test_example_client
+      - run: make test_example_client
 
-      - name: upload-artifact test reports
-        uses: actions/upload-artifact@v3
+      #- name: upload-artifact test reports
+      - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress
           path: test_client/reports/
-          retention-days: 150
+          retention-days: 90
 
       # https://github.com/marketplace/actions/test-reporting
-      - name: Test Report
-        uses: phoenix-actions/test-reporting@v8
+      #- name: Test Report
+      - uses: phoenix-actions/test-reporting@v8
         id: test-report   # Set ID reference for step
         if: always()
         with:

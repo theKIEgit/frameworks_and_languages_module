@@ -21,7 +21,7 @@ jobs:
         with:
           name: reports
           path: test_server/reports/
-          retention-days: 150
+          retention-days: 90
 
       # https://github.com/marketplace/actions/test-reporting
       - uses: phoenix-actions/test-reporting@v8

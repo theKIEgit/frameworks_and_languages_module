@@ -12,20 +12,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - name: make test_example_server
-        run: make test_example_server
 
-      - name: upload-artifact test reports
-        uses: actions/upload-artifact@v3
+      #- name: make test_example_server
+      - run: make test_example_server
+
+      #- name: upload-artifact test reports
+      - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: reports
           path: test_server/reports/
-          retention-days: 150
+          retention-days: 90
 
       # https://github.com/marketplace/actions/test-reporting
-      - name: Test Report
-        uses: phoenix-actions/test-reporting@v8
+      #- name: Test Report
+      - uses: phoenix-actions/test-reporting@v8
         id: test-report   # Set ID reference for step
         if: always()
         with:
