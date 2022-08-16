@@ -28,7 +28,7 @@ Your writing should be short, sharp, technical and meaningful.
 ### Task
 Produce a summary technical report to the business directors (1600 words total)
 The report should contain:
-* An introduction to the business directors about the purpose of this technical report
+* An introduction summary of what this report contains and why it might be useful to business directors and your engineering team
 * Describe the features of the frameworks and languages and explain the problem that they are solving:
   * Server framework features *3
   * Server language features *2
@@ -37,14 +37,18 @@ The report should contain:
     * Each feature should contain
       * Technical description of the feature (40 words - 1 mark)
       * A code snippet example demonstrating the feature (1 mark)
-      * Explain the why/benefits/problems (40 words - 1 mark)
-      * Provide reference(s) external to your feature (references do not count towards word count. No reference == No mark)
+        * If you can additionally permalink to a snippet in your own code that would be additional supporting evidence
+      * Explain the problem-this-is-solving/why/benefits/problems (40 words - 1 mark)
+      * Provide link/reference(s) to your source of information about the feature (references do not count towards word count. No reference == No mark)
 * A technical critique of why the existing prototype implementation is not fit for business use
   * Server prototype *2 (2 marks)
   * Client prototype *2 (2 marks)
-* Consider a 2 year technical roadmap for this implementation
+    * each critique should contain
+      * A code snippet example demonstrating the feature (1 mark)
+      * Explain the this pattern is problematic (40 words - 1 mark)
+* Future Technology Suggestions: Consider a 2 year technical expansion/deployment for freecycle-inc
   * Suggest *3 features of other frameworks or tools/technologies that might be useful in expanding the freecycle product
-    * description of the feature or tool (40 words - 1 mark)
+    * description of a feature or tool (40 words - 1 mark)
     * why/benefits/problems with using this (40 words - 1 mark)
     * Provide reference(s) (references do not count towards word count. No reference == No mark)
 

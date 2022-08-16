@@ -31,14 +31,6 @@ The repository provides:
 
 ### Marks Breakdown
 
-* 35% Server side implementation passing automated REST tests
-* 35% Client side implementation passing automated browser tests
-* 16% Visual usability (use of visual framework)
-* 14% Comments/Markdown-Documentation/Readability/Readable-Git-Log
-  * Documentation for a developer to run and debug each container
-  * 7% for server
-  * 7% for client
-
 
 
 | Assignment | Section | Marks (Total 60) |
@@ -48,13 +40,8 @@ The repository provides:
 | 1 | Client tests                   | 21 |
 | 1 | Client documentation           |  4 |
 | 1 | Visual framework               | 10 |
+|   |                                | 60 |
 
-
-| 2 | Server framework justification | 15 |
-| 2 | Client framework justification | 15 |
-| 2 | Critique of prototype          |  5 |
-| 2 | Future Recommendations         |  5 |
-|   |                                | 40 |
 
 Server Tests
 ------------

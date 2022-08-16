@@ -9,7 +9,6 @@ on:
 
 jobs:
   test:
-    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
@@ -20,9 +19,9 @@ jobs:
         uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: cypress
+          name: reports
           path: test_server/reports/
-          retention-days: 5
+          retention-days: 150
 
       # https://github.com/marketplace/actions/test-reporting
       - name: Test Report

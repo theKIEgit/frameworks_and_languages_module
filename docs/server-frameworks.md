@@ -169,13 +169,15 @@ dotnet csproj
 
 
 [OWIN](http://owin.org/) - Open Web Interface for .NET
+* [](https://www.kindsonthegenius.com/how-to-create-rest-api-in-net-using-c-and-visual-studio/)
+* [](https://www.c-sharpcorner.com/UploadFile/4b0136/restful-api-in-Asp-Net-introduction-of-rest-web-api/)
 
 * ASP.NET Core Web API
     * [Using System.Text.Json in a Web API Project](https://code-maze.com/introduction-system-text-json-examples/)
     * [ASP.NET Web API Tutorials](https://www.tutorialsteacher.com/webapi)
 
 
-Nancy
+Nancy - csharp
 -----
 
 TODO
@@ -187,6 +189,7 @@ SignalIR
 Other C#
 TODO: https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor
 https://github.com/markrendle/Flux
+
 
 Snaic
 -----
@@ -285,7 +288,7 @@ Laravel
     * https://laravel.com/docs/8.x/responses#strings-arrays
 
 
-Gin
+Gin - golang
 ---
 
 * [Gin Web Framework](https://gin-gonic.com/)
@@ -293,6 +296,11 @@ Gin
 * [TutorialEdge.net - Creating a RESTful API With Golang](https://tutorialedge.net/golang/creating-restful-api-with-golang/)
 
 I may create a docker example of this for next session
+
+Echo -golang
+----
+
+* [echo](https://github.com/labstack/echo) -  High performance, minimalist Go web framework 
 
 
 Zitonic - Earlang

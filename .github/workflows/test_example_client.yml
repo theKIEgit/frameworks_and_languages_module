@@ -24,7 +24,7 @@ jobs:
         with:
           name: cypress
           path: test_client/reports/
-          retention-days: 5
+          retention-days: 150
 
       # https://github.com/marketplace/actions/test-reporting
       - name: Test Report
