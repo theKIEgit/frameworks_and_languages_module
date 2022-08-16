@@ -32,6 +32,6 @@ jobs:
         id: test-report   # Set ID reference for step
         if: always()
         with:
-          name: test_client
+          #name: test_client
           path: test_client/reports/*.xml
           reporter: java-junit
