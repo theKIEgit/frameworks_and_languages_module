@@ -10,14 +10,11 @@ Number of hours when students are expected to study independently or amongst pee
 To develop the student’s understanding of the fundamental concepts of Programming Frameworks and Languages. This module supports the Implement and Operate elements of the CDIO model.
 
 ## Module learning outcomes
-
 By the end of the module students should be able to:
 
-1. Demonstrate an understanding of the concept of a Framework in general,
-a Framework used for Programming, and a Framework used for software
-Testing.
-2. Critically evaluate the effectiveness of a particular framework for an application and platform.
-3. Synthesise a small digital artefact using a well-formed programming framework.
+1. Demonstrate an understanding of the concept of a Framework in general, a Framework used for Programming, and a Framework used for software Testing
+2. Critically evaluate the effectiveness of a particular framework for an application and platform
+3. Synthesise a small digital artefact using a well-formed programming framework
 
 ## Overview of learning and teaching activities on the module
 * This module will use the CDIO educational framework within the context of developing a full-stack web service to a formal business specification using professional software engineering tools. 
@@ -32,8 +29,9 @@ Testing.
 * Blackboard and GitHub will be the repository’s for all learning materials.
 
 ## Equipment you need to bring to class
-We will be using linux containers to develop and test software. GitPod will be the recommend online cloud IDE to
-support your work both on and off campus. Some students may wish to setup their own equipment for native development environment.
+* We will be using linux containers to develop and test software
+* GitPod will be the recommend online cloud IDE to support your work both on and off campus
+    * Some students may wish to setup their own equipment for native development environment
 
 ## Assessments
 
@@ -50,15 +48,13 @@ Return: Monday 30th January 2023, Turnitin
 
 |Assignment|Section|Marks|
 |-|-|-|
-|Digital Artifact| Server implementation| 21|
-|Digital Artifact| Server documentation |4|
-|Digital Artifact| Client implementation| 21|
-|Digital Artifact |Client documentation |4|
-|Digital Artifact |Use of visual framework |10|
-|Technical Report |Critique of prototype |7|
-|Technical Report |Server framework justification| 15|
-|Technical Report |Client framework justification |15|
-|Technical Report |Road map |3|
+|Digital Artifact| Server implementation| 25|
+|Digital Artifact| Client implementation| 25|
+|Digital Artifact| Visual framework     | 10|
+|Technical Report| Server framework/language features   |15|
+|Technical Report| Client framework/language features   |15|
+|Technical Report| Critique of framework-less prototype | 4|
+|Technical Report| Future Recommendations               | 6|
 |||100|
 
 Table 1: Marks overview for all assignments
@@ -95,7 +91,7 @@ Student are reminded again that they should be contributing 150 hours of indepen
 * At Level 6; The use of the frameworks are your responsibility. You will not be directly instructed how to use one particular framework.
 * It is expected that you follow the online tutorials for a range of frameworks to enable to you to compare and contrast language/framework features.
 * You should be independently reading, exploring, and experimenting with a range of frameworks throughout the module duration.
-* You should be discussing the merits and features of a different frameworks with your peers.
+* You should be discussing the merits and features of a different frameworks with your peers and citing/references these discussions in code.
 * You should be sharing your code and progress openly. This is good practice for all professional and personal projects.
 
 ## Referencing system
@@ -104,9 +100,7 @@ In program code; It is good practice to reference code patterns/snippets with ur
 This is useful for future maintainers to follow your thought process. 
 It is always important to acknowledge sources of information. It is acceptable to use snippets of other code if referenced and justified correctly.
 
-Written work should use Harvard referencing style. Pears & Shields (2016) give a complete guide to Harvard referencing. Guidelines on using the Harvard Referencing style are available at:
-https://www.canterbury.ac.uk/library/docs/harvard.pdf
-https://www.canterbury.ac.uk/students/docs/study-skills/resource-1-Harvard-Referencing-Guide.pdf
+As this is an engineering report. References will be made with URL's to framework documentation, blogs and articles. (The access date can be inferred with `git blame`)
 
 ## Learning Materials/Resources
 All learning materials and resources will be provided during the taught sessions and will be made available via the module’s area on Blackboard.

@@ -33,17 +33,25 @@ https://github.com/calaldees/frameworks_and_languages_module
 
 The repository provides:
 * An OpenAPI3 Specification for the server service `openapi.yml`
-* `example_server` A reference server implementation that runs in a container (you will replace this implementation) 
-* `test_server` An automated test container that tests the server implementation's conformance to the OpenAPI3 spec.
-  * These test run as GitHub actions as part of CI
-* `example_client` A reference client implementation (that uses `example_server` container)
-* `test_client` A set of browser tests (cypress), to document the expected client/user flows
+* Complete working reference implementations
+  * This `example_` reference implementations were built with NO frameworks to allow you to critique/understand why frameworks are used (see Assignment Technical Report)
+  * `example_server` A complete reference server implementation that runs in a container (you re-create this functionality) 
+  * `example_client` A reference client implementation (that uses `example_server` container)
+* Automated Tests  
+* * These test run as GitHub actions as part of CI
+  * `test_server` An automated test container that tests the server implementation's conformance to the OpenAPI3 spec
+  * `test_client` A set of browser tests (cypress), to document the expected client/user flows
+* Your implementations
+  * `./server/` the stub folder for your server container implementation
+  * `./client/` the stub folder for your client container implementation
+
 
 Task
 ----
+
 * You are to replace the stub `./server/` and `./client/` implementations with new implementations that pass the server and client automated test suites.
 * Your solutions must run in containers on CI
-  * no tests passing == 0 marks
+* no tests passing == 0 marks
 * Your solutions can use any programming language or frameworks as long as the tests pass
 
 
@@ -57,7 +65,6 @@ Guidance
   * The system will be operating with less than 100 items (pagination is not needed)
 * You will be allocated marks for partial solutions (based on tests that pass)
 * You are working towards being a professional software engineers. It is expected that you share and discuss your solutions with peers throughout this assignment. It is expected that you document your sources/references for your code (this includes discussions with dates with classmates)
-
 
 
 Server Tests
@@ -107,7 +114,7 @@ no framework == 0 marks
   * delete + remove (4 marks)
 * Tutor verified
   * Displays real image (1 mark)
-  * (1 mark)
+  * ? (1 mark)
 
 
 Independent (use of) Framework (Server and Client)

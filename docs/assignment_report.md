@@ -3,6 +3,7 @@ Assignment - Technical Report
 
 Overview
 --------
+
 Create a 1600 word technical report. This will be 40% of this module.
 
 * You will demonstrate your understanding of the frameworks and languages you have used in your _digital artefact_ assignment.
@@ -45,6 +46,9 @@ The report should contain:
       * Explain the problem-this-is-solving/why/benefits/problems (40 words - 1 mark)
       * Provide link/reference(s) to your source of information about the feature (references do not count towards word count. No reference == No mark)
 * A technical critique of why the existing prototype implementation is not fit for business use
+  * [github.com/calaldees/frameworks_and_languages_module](https://github.com/calaldees/frameworks_and_languages_module)
+    * `./example_server/`
+    * `./example_client/`
   * Server prototype *2 (2 marks)
   * Client prototype *2 (2 marks)
     * each critique should contain
@@ -63,22 +67,3 @@ Guidance
   * Realistically; You are not a lead developer. You are not expected to write this to a true industry standard. You are trying to demonstrate to an external examiner your knowledge and understanding.
 * Technical reports heavily used bullet points. You do not need to write in full english paragraphs all the time.
 * Your justifications need to be supported with references. Show links to developer documentation, blog articles and case studies that support your technical assessment/recommendations. It is an institutional policy to use Harvard style referencing.
-
-
-Marking Criteria
-----------------
-TODO?
-* Quality of justification
-  * Wide range of technical and business factors are considered (skills marketplace, lead time, scale, maintainability, deployment)
-* Referencing/Supporting Evidence
-* Quality of written communication
-
-Template
-Seb Example
-https://cccu-my.sharepoint.com/:w:/g/personal/sb1501_canterbury_ac_uk/ERyQoBQxhpJJuco4pFxlgJoBG5J2AFvPBPxwUT_x2fY-lg?e=PeDJci
-
-
-* A repository has been setup with an existing prototype implementation with working test suites.
-* [github.com/calaldees/frameworks_and_languages_module](https://github.com/calaldees/frameworks_and_languages_module)
-* Clone this repository and inspect it's functionally.
-
