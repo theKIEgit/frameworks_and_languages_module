@@ -1,7 +1,8 @@
 Assignment - Technical Report
-----------
+=============================
 
-### Overview
+Overview
+--------
 Create a 1600 word technical report. This will be 40% of this module.
 
 * You will demonstrate your understanding of the frameworks and languages you have used in your _digital artefact_ assignment.
@@ -16,16 +17,19 @@ Create a 1600 word technical report. This will be 40% of this module.
 | 2 | Critique of framework-less prototype |  4 |
 | 2 | Future Recommendations         |  6 |
 |   |                                | 40 |
+1 mark = 1% of module
 
 (1600words/40marks) == 40 words per mark. Make a clear point every 40 Words.
 Your writing should be short, sharp, technical and meaningful.
 
-### Scenario
+Scenario
+--------
 * You have been employed by FreeCycle-Inc as a Lead Engineer
 * Your role is to technically advise and implement FreeCycle's digital products on web and mobile platforms
 * Freecycle-Inc have an existing working prototype for their FreeCycle platform with tests.
 
-### Task
+Task
+----
 Produce a summary technical report to the business directors (1600 words total)
 The report should contain:
 * An introduction summary of what this report contains and why it might be useful to business directors and your engineering team
@@ -53,16 +57,16 @@ The report should contain:
     * Provide reference(s) (references do not count towards word count. No reference == No mark)
 
 
-### Guidance
+Guidance
+--------
 * Level of Expectation:
-  * This task is intended to mimics a genuine task that might be required of you as a software engineer. This is a scenario for a learning exercise and lacks some of nuance of a real problem.
   * Realistically; You are not a lead developer. You are not expected to write this to a true industry standard. You are trying to demonstrate to an external examiner your knowledge and understanding.
 * Technical reports heavily used bullet points. You do not need to write in full english paragraphs all the time.
-  * Consider 'Lean documentation'
 * Your justifications need to be supported with references. Show links to developer documentation, blog articles and case studies that support your technical assessment/recommendations. It is an institutional policy to use Harvard style referencing.
 
 
-#### Marking Criteria
+Marking Criteria
+----------------
 TODO?
 * Quality of justification
   * Wide range of technical and business factors are considered (skills marketplace, lead time, scale, maintainability, deployment)

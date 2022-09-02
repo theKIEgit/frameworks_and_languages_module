@@ -1,5 +1,31 @@
-Assignment 2 - Digital Artifact
-------------
+Assignment - Digital Artifact
+=============================
+
+Overview
+--------
+
+Create a digital artifact. This will be 60% of this module.
+
+* You will demonstrate you can work towards a formal spec and use automated tests to produce a working system to a business specification
+* You will use 3 frameworks for 3 separate problem domains
+
+
+| Assignment | Section | Marks (Total 60) |
+|---|--------------------------------|---:|
+| 1 | Server tests                   | 16 |
+| 1 | Server framework (independent) |  5 |
+| 1 | Server documentation           |  4 |
+| 1 | Client tests                   | 16 |
+| 1 | Client framework (independent) |  5 |
+| 1 | Client documentation           |  4 |
+| 1 | Visual framework               |  6 |
+| 1 | Visual framework (independent) |  4 |
+|   |                                | 60 |
+1 mark = 1% of module
+
+
+Scenario
+--------
 
 Freecycle-Inc have a working prototype implementation of their proposed service.
 
@@ -13,40 +39,32 @@ The repository provides:
 * `example_client` A reference client implementation (that uses `example_server` container)
 * `test_client` A set of browser tests (cypress), to document the expected client/user flows
 
-### Task
-* You are to replace the example server and client implementations with new implementations that pass the server and client automated test suites
+Task
+----
+* You are to replace the stub `./server/` and `./client/` implementations with new implementations that pass the server and client automated test suites.
 * Your solutions must run in containers on CI
-* Your solutions can use any programming language or framework as long as the tests pass
+  * no tests passing == 0 marks
+* Your solutions can use any programming language or frameworks as long as the tests pass
 
-### Guidance
+
+Guidance
+--------
 
 * It is not required for your server service to have a persistent data model
-  * You can use a data persistence model if desired. There are no extra marks allocated to this
+  * You can use a data persistence model if desired, but There are no extra marks allocated to this
 * There is no requirement for any user authentication
 * There is no requirement for scale
-  * The system will be operating with less than 100 items
-* You will be allocated marks for partial solutions
-* You are working towards being a professional software engineers. It is expected that you share and discuss your solutions with peers throughout this assignment
+  * The system will be operating with less than 100 items (pagination is not needed)
+* You will be allocated marks for partial solutions (based on tests that pass)
+* You are working towards being a professional software engineers. It is expected that you share and discuss your solutions with peers throughout this assignment. It is expected that you document your sources/references for your code (this includes discussions with dates with classmates)
 
-
-### Marks Breakdown
-
-
-
-| Assignment | Section | Marks (Total 60) |
-|---|--------------------------------|---:|
-| 1 | Server tests                   | 21 |
-| 1 | Server documentation           |  4 |
-| 1 | Client tests                   | 21 |
-| 1 | Client documentation           |  4 |
-| 1 | Visual framework               | 10 |
-|   |                                | 60 |
 
 
 Server Tests
 ------------
 
 0 tests == 0 marks
+no framework == 0 marks
 
 Port open
 serves html on root
@@ -74,33 +92,40 @@ NEAR
 
 16 marks
 
-5 marks for?
-Use of framework features (1 mark)
-Use of language features (list comprehensions, async etc) (1 mark)
-Conciseness (verbose? unneed intermediaries? readable) (1 mark)
-File/folder structure (sensible names) (1 mark)
-
-
-Documentation
-README sufficient to explain, launch, test, use  (1 mark)
-Comments in code describe/explain functionality (1 mark)
-minimum 24+ Commits well worded and technical (1 mark) [automate]
-minimum 4x References snippets/tutorial urls inline (1 mark) [automate]
- Disclose your sources - what conversations with other members of the group contributed to this code
-
 
 Client Tests
 ------------
 
 0 tests == 0 marks
+no framework == 0 marks
 
-200 (1 mark)
-has Freecycle (1 mark)
-has Text input and button (2 mark)
-submit + see item (6 marks)
-delete + remove (4 marks)
+* Automated tests (14 marks)
+  * 200 (1 mark)
+  * has 'Freecycle' text (1 mark)
+  * has Text input and button (2 mark)
+  * submit + see item (6 marks)
+  * delete + remove (4 marks)
+* Tutor verified
+  * Displays real image (1 mark)
+  * (1 mark)
 
-todo: has real image?
+
+Independent (use of) Framework (Server and Client)
+------------------------------
+Use of a language or framework that was not under direct instruction from lectures (5 marks)
+  Use of framework features (1 mark)
+  Use of language features (list comprehensions, async etc) (1 mark)
+  Conciseness (verbose? unneeded intermediaries? readable) (1 mark)
+  File/folder structure (sensible names) (1 mark)
+
+
+Documentation (Server and Client)
+-------------
+README sufficient to explain, launch, test, use  (1 mark)
+Comments in code describe/explain functionality (1 mark)
+minimum 24+ Commits well worded and technical (1 mark) [automate]
+minimum 4x References snippets/tutorial urls inline (1 mark) [automate]
+ Disclose your sources - what conversations with other members of the group contributed to this code with dates and @githubUsernames
 
 
 Visual framework
@@ -108,11 +133,12 @@ Visual framework
 
 no framework == 0 marks (even if it looks nice)
 
-Navbar 2
+* Tutor verified (6 marks)
+  * Navbar/Title (1 mark)
+  * styled
+    * inputs (1 mark)
+    * buttons (1 mark)
+    * item/card (1 mark)
+  * Responsive to mobile (2 marks)
 
-styled
- input 2
- buttons 1
-
-item/card 2
-Responsive to mobile 3
+You used a framework that was not under direct instruction (4 marks)
