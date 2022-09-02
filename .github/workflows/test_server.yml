@@ -28,6 +28,6 @@ jobs:
         id: test-report   # Set ID reference for step
         if: always()
         with:
-          name: junit
+          name: server-junit
           path: test_server/reports/*.xml
           reporter: java-junit
