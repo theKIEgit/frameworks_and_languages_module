@@ -46,6 +46,8 @@ The repository provides:
 Server Tests
 ------------
 
+0 tests == 0 marks
+
 Port open
 serves html on root
 POST
@@ -73,21 +75,24 @@ NEAR
 16 marks
 
 5 marks for?
-Use of framework
-File/folder structure (sensible names)
-Use of language features (list comprehensions, async etc)
-Conciseness (verbose? unneed intermediaries? readable)
+Use of framework features (1 mark)
+Use of language features (list comprehensions, async etc) (1 mark)
+Conciseness (verbose? unneed intermediaries? readable) (1 mark)
+File/folder structure (sensible names) (1 mark)
 
 
 Documentation
-README sufficient to explain, launch, test  (1 mark)
-Comments in code describe/explain (1 mark)
-minimum 24+ Commits structured (1 mark) [automate]
-minimum 4x Reference snippets/tutorial urls inline (1 mark) [automate]
+README sufficient to explain, launch, test, use  (1 mark)
+Comments in code describe/explain functionality (1 mark)
+minimum 24+ Commits well worded and technical (1 mark) [automate]
+minimum 4x References snippets/tutorial urls inline (1 mark) [automate]
+ Disclose your sources - what conversations with other members of the group contributed to this code
 
 
 Client Tests
 ------------
+
+0 tests == 0 marks
 
 200 (1 mark)
 has Freecycle (1 mark)

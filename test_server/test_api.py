@@ -42,6 +42,13 @@ def new_item(ENDPOINT):
     yield response.json()
 
 
+def test_port(ENDPOINT):
+    """
+    Check port if open
+    """
+    pass
+
+
 def test_root(ENDPOINT):
     """
     Base endpoint should return html of some form to the user.
@@ -75,6 +82,9 @@ def test_item_post_201(ENDPOINT):
 def test_item_get_200(ENDPOINT, new_item):
     response = requests.get(f"{ENDPOINT}/item/{new_item['id']}")
     assert response.status_code == 200
+def test_item_get_200_fields(ENDPOINT, new_item):
+    response = requests.get(f"{ENDPOINT}/item/{new_item['id']}")
+    assert response.status_code == 200
     assert response.json() == new_item
 
 def test_item_get_404(ENDPOINT):
@@ -89,6 +99,11 @@ def test_items_get_200(ENDPOINT):
     assert response.status_code == 200
     items = response.json()
     assert isinstance(items, list)
+def test_items_get_200_fields(ENDPOINT, new_item):
+    response = requests.get(f"{ENDPOINT}/items")
+    assert response.status_code == 200
+    items = response.json()
+    assert items[-1] == new_item
 
 def test_item_delete_404(ENDPOINT):
     response = requests.delete(f"{ENDPOINT}/item/99999999")
