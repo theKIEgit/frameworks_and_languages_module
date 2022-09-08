@@ -35,6 +35,8 @@ By the end of the module students should be able to:
 
 ## Assessments
 
+You will be working in own public GitHub forked repository. At the datetime of the deadline a snapshot of your fork will automatically be taken. In addition, You need to formally submit a zip file with the contents of your repository to TurnitIn for a formal audit trail.
+
 ### Digital Artefact 60%
 Due: Monday 12th December 2022, Turnitin
 Return: Monday 16th January 2023, Turnitin
@@ -48,9 +50,9 @@ Return: Monday 30th January 2023, Turnitin
 
 |Assignment|Section|Marks|
 |-|-|-|
-|Digital Artifact| Server implementation| 25|
-|Digital Artifact| Client implementation| 25|
-|Digital Artifact| Visual framework     | 10|
+|Digital Artifact| Server framework implementation| 25|
+|Digital Artifact| Client framework implementation| 25|
+|Digital Artifact| Visual framework implementation| 10|
 |Technical Report| Server framework/language features   |15|
 |Technical Report| Client framework/language features   |15|
 |Technical Report| Critique of framework-less prototype | 4|
@@ -60,10 +62,16 @@ Return: Monday 30th January 2023, Turnitin
 Table 1: Marks overview for all assignments
 
 ### Viva Process
+
 Submissions may be subject to a viva process.
 The digital artefact is a proxy for assessing student understanding. For some students, understanding will have already been incrementally demonstrated in sessions.
 The purpose of a viva is to verify student understanding. 
 In the two weeks following a submission deadline, students may be called to a viva. Student could be asked to demo their solution, describe aspects of it’s functionality and show their workflow.
+
+### Plagiarism detection
+It is expected that some code solutions could be shared. Some sharing of solutions is acceptable and normal, only if the developer conversion is referenced as detailed in the assignment guidance.
+
+Plagiarism detection software may be used to produce similarity reports for both code submissions and write-up submissions. These reports could be used as evidence towards academic misconduct.
 
 
 ## Indicative schedule of delivery
