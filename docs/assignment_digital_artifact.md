@@ -7,8 +7,18 @@ Overview
 Create a digital artifact. This will be 60% of this module.
 
 * You will demonstrate you can work towards a formal spec and use automated tests to produce a working system to a business specification
-* You will use 3 frameworks for 3 separate problem domains
+* You will use 3 frameworks for 3 separate problem domains (server, client, layout)
 
+
+Intended Learning Outcomes
+--------------------------
+
+* LO 1. Demonstrate an understanding of the concept of a Framework in general, a Framework used for Programming, and a Framework used for software Testing.
+* LO 3. Synthesise a small digital artefact using a well-formed programming framework.
+
+
+Marks Overview
+--------------
 
 | Assignment | Section | Marks (Total 60) |
 |---|--------------------------------|---:|
@@ -64,81 +74,112 @@ Guidance
 * There is no requirement for scale
   * The system will be operating with less than 100 items (pagination is not needed)
 * You will be allocated marks for partial solutions (based on tests that pass)
-* You are working towards being a professional software engineers. It is expected that you share and discuss your solutions with peers throughout this assignment. It is expected that you document your sources/references for your code (this includes discussions with dates with classmates)
+* You are working towards being a professional software engineers. It is expected that you share and discuss your solutions with peers throughout this assignment. 
+* It is expected that you document your sources/references for your code (this includes discussions with dates with classmates, url's to stack overflow resources and framework documentation)
 
 
-Server Tests
-------------
+Mark Breakdown
+--------------
 
-0 tests == 0 marks
+### Server Tests
+
+0 automated tests pass == 0 marks
 no framework == 0 marks
 
-Port open
-serves html on root
-POST
- returns json
- complete 201
-POST
- incomplete 405
-GET item
- json
- fields
- 404
-GET items
- json
- fields
- filter username
-DELETE
- 200
- 404
-CORS
-  OPTIONS
-  items
-NEAR
- bonus
+* Automated Test (16 marks) (see `/test_server/test_api.py`)
+  * Port open (1 mark)
+  * serves html on `/` (1 mark)
+  * POST `/item/`
+    * returns json
+    * complete 201 (1 mark)
+    * incomplete 405 (1 mark)
+  * GET `/item/{id}`
+    * json (1 mark)
+    * fields (1 mark)
+    * 404 (1 mark)
+    * iso date (1 mark)
+  * GET `/items/`
+    * json (1 mark)
+    * fields (1 mark)
+    * from POST (1 mark)
+    * filter username (1 mark)
+  * DELETE `/item/{id}`
+    * 204 (1 mark)
+    * 404 (1 mark)
+  * CORS
+    * OPTIONS 204 `/` (1 mark)
+    * `/items/` headers (1 mark)
 
-16 marks
+16 marks total
 
 
-Client Tests
-------------
+### Client Tests
 
-0 tests == 0 marks
-no framework == 0 marks
+0 automated tests pass == 0 marks.
+no framework == 0 marks.
 
-* Automated tests (14 marks)
+* Automated tests (15 marks) (see `/test_client/cypress/freecycle.cy.js`)
   * 200 (1 mark)
   * has 'Freecycle' text (1 mark)
   * has Text input and button (2 mark)
-  * submit + see item (6 marks)
-  * delete + remove (4 marks)
-* Tutor verified
-  * Displays real image (1 mark)
-  * ? (1 mark)
+  * submit + see item (7 marks for single test)
+    * api_url from query string (1)
+    * button actions post (2)
+    * auto fetch list (2)
+    * ul populate with data (2)
+  * delete + remove (4 marks for single test)
+    * button on item (1)
+    * id in li data (1)
+    * delete called (1)
+    * list updated (1)
+* Tutor verified (1 mark)
+  * Displays real image url (1 mark)
+
+16 marks total
 
 
-Independent (use of) Framework (Server and Client)
-------------------------------
-Use of a language or framework that was not under direct instruction from lectures (5 marks)
-  Use of framework features (1 mark)
-  Use of language features (list comprehensions, async etc) (1 mark)
-  Conciseness (verbose? unneeded intermediaries? readable) (1 mark)
-  File/folder structure (sensible names) (1 mark)
+### Server framework (independent)
+
+* Independent (use of) Framework (Server and Client)
+* Optional! For advanced students aiming for 80% or more
+
+* Use of a language or framework that was not under direct instruction from lectures (5 marks)
+  * Use of framework features (1 mark)
+  * Use of language features (list comprehensions, async etc) (1 mark)
+  * Conciseness (verbose? unneeded intermediaries? readable) (1 mark)
+  * File/folder structure (sensible names) (1 mark)
+
+5 marks total
 
 
-Documentation (Server and Client)
--------------
-README sufficient to explain, launch, test, use  (1 mark)
-Comments in code describe/explain functionality (1 mark)
-minimum 24+ Commits well worded and technical (1 mark) [automate]
-minimum 4x References snippets/tutorial urls inline (1 mark) [automate]
- Disclose your sources - what conversations with other members of the group contributed to this code with dates and @githubUsernames
+### Client framework (independent)
+
+* See Server framework (independent) (above)
+
+5 marks total
 
 
-Visual framework
-----------------
+### Server documentation
 
-no framework == 0 marks (even if it looks nice)
+* README sufficient to explain, launch, test, use  (1 mark)
+* Comments in code describe/explain functionality (1 mark)
+* minimum 24+ Commits - well worded and technical (1 mark) (12 weeks == average 2 commits per week)
+* minimum 4x References snippets/tutorial urls inline (1 mark)
+  * Disclose your sources - what conversations with other members of the group contributed to this code with dates and @githubUsernames
+
+4 marks total
+
+
+### Client documentation
+
+* See Server documentation (above)
+
+4 marks total
+
+
+### Visual framework
+
+no framework == 0 marks (even if it looks nice).
 
 * Tutor verified (6 marks)
   * Navbar/Title (1 mark)
@@ -148,4 +189,13 @@ no framework == 0 marks (even if it looks nice)
     * item/card (1 mark)
   * Responsive to mobile (2 marks)
 
-You used a framework that was not under direct instruction (4 marks)
+6 marks total
+
+
+### Visual framework (independent)
+
+* Optional! For advanced students aiming for 80% or more
+* You independently used a framework that was not under direct instruction (4 marks).
+
+
+4 marks total

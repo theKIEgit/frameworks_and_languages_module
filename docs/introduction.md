@@ -6,24 +6,26 @@ Introduction (2 hours)
 
 * Learning Objectives
   * Understand the module content and assessment content
+  * Understand the core technologies we will be using
 
 Who am I?
----------]
+---------
 
 * 7 Years teaching Computing in secondary schools
     * A-level, Linux, networking, game programming. Part of transition from ICT to Computing.
 * 10 years Software engineering
     * 2 years - Lead developer of a Citizen Journalism startup
     * 6 years - Global Radio (full stack web content management developer, android dev, Lead test and internal tooling engineer)
-    * 6 months - financial investment platform CI infrastructure
-    * 1.5 years NHS Genome processing pipeline for cancer and rare disease analysis
-* 3 years Lecturer in Education (teacher training)
-* Now - Lecturer in Computing
+    * 6 months - Financial investment platform CI infrastructure
+    * 1.5 years - NHS Genome processing pipeline for cancer and rare disease analysis
+* 4 years Lecturer in Education (teacher training)
+* 2 years Lecturer in Computing
 
 * Side projects
   * DMX Stage lighting and projector sys (with 3d stage visualiser)
   * Karaoke System for mobile phones
   * Lots of other rubbish
+  * Won a number of commercial hack events
 
 
 Module Overview
@@ -52,7 +54,11 @@ Whiteboard in half: words to describe
 The sign of an armature:
 > _TECH_XYZ_ is rubbish
 This module will help develop an important part of your professional skill-set: 
-> The ability to discuss and reason about technology choices
+* The ability to discuss and reason about technology choices
+
+* The ability to use a professional toolchain (CI)
+* Understand the basic elements of full stack web development
+  
 
 * Language
   * A formal structure to describe machine behaviour
@@ -67,7 +73,7 @@ This module will help develop an important part of your professional skill-set:
 ### How will we learn
 
 1. Focus on a business engineering problem with real industry tools
-    * Hand on each week with a range of tools
+    * Hands-on each week with a range of tools
 2. Discussion
     * Real engineers can discuss/reason about technology
     * (Hack time, coffee-area chat)
@@ -79,18 +85,18 @@ This module will help develop an important part of your professional skill-set:
 * Level 5 - Supported developing competency in a range of problem domains
 * Level 6 - You are able to self direct (with support)
 
-* My role is NOT to have all the answers. 
-* My role is to facilitate your transition towards a skilled professional.
+* My role is NOT to have all the answers
+* My role is to facilitate your transition towards a skilled professional
 
-Side Note: Employment. Popular languages? Less popular or new languages?
+Side Note: Employment. Popular languages? Less popular or new languages? Mark scheme 70%+
 
 #### Session Overview - Online/Campus
 
 Task: Look on blackboard at session list
 
 * Each week
-    * 09:00 - 13:00 Lab 
-    * 14:00 - 18:00 Support
+    * 09:00 - 13:00 Lab
+    * 14:00 - 18:00 Supervised Workshop Support
 
 
 Starting point Quiz (15min)
@@ -142,19 +148,21 @@ Mark breakdown
 
 Demo:
 * Fork (description)
+  * Allow CI
 * The IDE
 * The Interaction (public port)
 * The tests
 * GitPod shutdown and startup
   * 50 hours a month free
+    * [GitHub Student Developer Pack](https://education.github.com/pack) - 100 hours with cccu address + cccu id 
 
 1. (Fork and) run the project on GitPod
 2. Add an item with the web interface
 3. Run the tests
 
 
-### Public Repo?
-* Will confer with course directors
+4. Make a commit and see CI
+
 
 
 

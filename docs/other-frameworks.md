@@ -27,6 +27,18 @@ Serverless Architecture
 
 Question: What problem is serverless trying to solve?
 
+### Edge rendering
+
+* vercel.com [Build your own web framework](https://vercel.com/blog/build-your-own-web-framework)
+    * build your own web framework that also deploys to edge and serverless infrastructure? 
+    * What features does a modern framework need to support, and how can we ensure that these features allow us to build a scalable, performant web application?
+        * Static Files to statically render pages
+        * Incremental Static Regeneration to automatically revalidate and regenerate pages after a specific timeout
+        * Edge Functions to enable edge rendering and middleware
+        * Automatic Image Optimization to efficiently serve the images using the latest format, enable lazy loading, and prevent layout shift
+        * Serverless Functions to server-render dynamic pages and create data fetching endpoints
+        * Edge Caching to quickly serve static files to users globally
+
 
 GraphQL
 -------
