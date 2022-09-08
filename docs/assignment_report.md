@@ -67,38 +67,42 @@ Report Contents
 
 * A summary of what this report contains and why it might be useful to business directors and your engineering team (no direct marks, but without this your write-up has no identifiable purpose)
 
-### Framework Features (30 Marks)
 
-Describe the features of the frameworks and languages and explain the problem that they are solving.
+### Framework Features (18 Marks)
+
+Describe the features of the frameworks and explain the problem that they are solving.
 
 * Headings
-  * 3 * Server framework features (3 * 3 marks = 9 marks)
-  * 2 * Server language features (2 * 3 marks = 6 marks)
-  * 3 * Client framework features (3 * 3 marks = 9 marks)
-  * 2 * Client language features (2 * 3 marks = 6 marks)
-
-* Each feature should contain (3 marks)
-  * Technical description of the feature (40ish words - 1 mark)
+  * 3 * Server framework features (3 * 3 marks per feature = 9 marks)
+  * 3 * Client framework features (3 * 3 marks per feature = 9 marks)
+* Each feature should contain (3 marks per feature)
+  1. Technical description of the feature (40ish words - 1 mark)
     * No technical terminology == no mark
-  * A code snippet example demonstrating the feature (1 mark)
+  2. A code block snippet example demonstrating the feature (1 mark)
     * If you can additionally permalink to a snippet in your own code that would be additional supporting evidence
-  * Explain the problem-this-is-solving/why/benefits/problems (40ish words - 1 mark)
+  3. Explain the problem-this-is-solving/why/benefits/problems (40ish words - 1 mark)
     * No technical terminology == no mark
-  * Provide reference urls - to your source of information about the feature 
+  4. Provide reference urls to your sources of information about the feature
     * references do not count towards word count. 
     * No reference == No mark for this entire feature
 
+### Language Features (12 Marks)
+
+Describe the features of the language and explain the problem that they are solving.
+
+* Headings
+  * 2 * Server language features (2 * 3 marks per feature = 6 marks)
+  * 2 * Client language features (2 * 3 marks per feature = 6 marks)
+* (see feature marks above)
+
 ### Critique of framework-less prototype (4 marks)
 
-* A technical critique of why the existing prototype implementation is not fit for business use
-  * Server prototype *2 (2 marks)
-  * Client prototype *2 (2 marks)
-* You will critique
-  * `./example_server/`
-  * `./example_client/`
-* Each critique should contain
+* A technical critique of why one aspect of the the existing prototype implementation is not fit for business use
+  * `./example_server/` Server prototype critique *1 (2 marks)
+  * `./example_client/` Client prototype critique *1 (2 marks)
+* Each prototype critique should contain (2 marks per critique)
   * A code snippet example demonstrating the feature (1 mark)
-  * Explain the this pattern is problematic (40ish words - 1 mark)
+  * Explain why this pattern is problematic (40ish words - 1 mark)
 
 ### Future Technology Recommendations (6 Marks)
 
