@@ -28,6 +28,7 @@ Marks Overview
 | 2 | Critique of framework-less prototype |  4 |
 | 2 | Future Technology Recommendations    |  6 |
 |   |                                | 40 |
+
 1 mark = 1% of module
 
 (1600 words / 40 marks) == 40-ish words per mark. Make a clear point every 40-ish Words.
@@ -51,8 +52,11 @@ Produce a summary technical report to the business directors (1600 words total)
 Report Template
 ---------------
 
+https://github.com/calaldees/frameworks_and_languages_module/blob/main/technical_report.md
+
+* It is industry practice to keep technical documentation alongside program code in the same code repository
 * A markdown report template has been provided `./technical_report.md`
-* You will edit this markdown file in-place in the repository. (do not rename the file)
+* You will edit this markdown file in-place in your cloned repository. (do not rename the file)
 * You will commit and submit this written report as part of your repository submission
 
 
@@ -61,20 +65,25 @@ Report Contents
 
 ### Introduction
 
-* a summary of what this report contains and why it might be useful to business directors and your engineering team (no direct marks, but without this your write-up has no identifiable purpose)
+* A summary of what this report contains and why it might be useful to business directors and your engineering team (no direct marks, but without this your write-up has no identifiable purpose)
 
 ### Framework Features (30 Marks)
 
-* Describe the features of the frameworks and languages and explain the problem that they are solving:
+Describe the features of the frameworks and languages and explain the problem that they are solving.
+
+* Headings
   * 3 * Server framework features (3 * 3 marks = 9 marks)
   * 2 * Server language features (2 * 3 marks = 6 marks)
   * 3 * Client framework features (3 * 3 marks = 9 marks)
   * 2 * Client language features (2 * 3 marks = 6 marks)
+
 * Each feature should contain (3 marks)
   * Technical description of the feature (40ish words - 1 mark)
+    * No technical terminology == no mark
   * A code snippet example demonstrating the feature (1 mark)
     * If you can additionally permalink to a snippet in your own code that would be additional supporting evidence
   * Explain the problem-this-is-solving/why/benefits/problems (40ish words - 1 mark)
+    * No technical terminology == no mark
   * Provide reference urls - to your source of information about the feature 
     * references do not count towards word count. 
     * No reference == No mark for this entire feature
@@ -106,7 +115,7 @@ Guidance
 --------
 
 * Every week a writing workshop will be provided in sessions.
-  * We will as a group refine our writing for individual sections.
+  * We will as a group refine our writing for individual sections above.
 * Level of Expectation
   * Realistically; You are not a lead developer. You are not expected to write this to a true industry standard. You are trying to demonstrate to an external examiner your knowledge and understanding of these technologies.
 * Technical reports heavily used bullet points. You do not need to write in full english paragraphs all the time.

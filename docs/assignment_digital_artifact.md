@@ -31,6 +31,7 @@ Marks Overview
 | 1 | Visual framework               |  6 |
 | 1 | Visual framework (independent) |  4 |
 |   |                                | 60 |
+
 1 mark = 1% of module
 
 
