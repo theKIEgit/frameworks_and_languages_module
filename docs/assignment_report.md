@@ -16,6 +16,18 @@ Intended Learning Outcomes
 * LO 2. Critically evaluate the effectiveness of a particular framework for an application and platform.
 
 
+Submission Guidance
+-------------------
+
+* You will clone a public fork of:
+    * https://github.com/calaldees/frameworks_and_languages_module
+* You will be working in own public GitHub forked repository. At the datetime of the deadline a snapshot of your fork will automatically be taken. In addition, You need to formally submit a zip file with the contents of your repository to TurnItIn for a formal audit trail. You will be provided with a TurnItIn coversheet.
+
+* It is industry practice to keep technical documentation alongside program code in the same code repository
+* A markdown report template has been provided [`./technical_report.md`](https://github.com/calaldees/frameworks_and_languages_module/blob/main/technical_report.md)
+* You will edit/commit `technical_report.md` markdown file in-place in your cloned fork repository. (do not rename the file)
+
+
 Marks Overview
 --------------
 
@@ -33,18 +45,6 @@ Marks Overview
 
 (1600 words / 40 marks) == 40-ish words per mark. Make a clear point every 40-ish Words.
 Your writing should be short, sharp, technical and meaningful.
-
-
-Submission Guidance
--------------------
-
-* You will clone a public fork of:
-    * https://github.com/calaldees/frameworks_and_languages_module
-* You will be working in own public GitHub forked repository. At the datetime of the deadline a snapshot of your fork will automatically be taken. In addition, You need to formally submit a zip file with the contents of your repository to TurnItIn for a formal audit trail. You will be provided with a TurnItIn coversheet.
-
-* It is industry practice to keep technical documentation alongside program code in the same code repository
-* A markdown report template has been provided [`./technical_report.md`](https://github.com/calaldees/frameworks_and_languages_module/blob/main/technical_report.md)
-* You will edit/commit `technical_report.md` markdown file in-place in your cloned fork repository. (do not rename the file)
 
 
 Scenario

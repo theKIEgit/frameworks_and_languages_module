@@ -17,6 +17,16 @@ Intended Learning Outcomes
 * LO 3. Synthesise a small digital artefact using a well-formed programming framework.
 
 
+Submission Guidance
+-------------------
+
+* You will clone a public fork of:
+    * [https://github.com/calaldees/frameworks_and_languages_module](https://github.com/calaldees/frameworks_and_languages_module)
+* You will be working in own public GitHub forked repository. At the datetime of the deadline a snapshot of your fork will automatically be taken. In addition, You need to formally submit a zip file with the contents of your repository to TurnItIn for a formal audit trail. You will be provided with a TurnItIn coversheet.
+
+* see the folder for your solution below
+
+
 Marks Overview
 --------------
 
@@ -33,16 +43,6 @@ Marks Overview
 |   |                                | 60 |
 
 1 mark = 1% of module
-
-
-Submission Guidance
--------------------
-
-* You will clone a public fork of:
-    * [https://github.com/calaldees/frameworks_and_languages_module](https://github.com/calaldees/frameworks_and_languages_module)
-* You will be working in own public GitHub forked repository. At the datetime of the deadline a snapshot of your fork will automatically be taken. In addition, You need to formally submit a zip file with the contents of your repository to TurnItIn for a formal audit trail. You will be provided with a TurnItIn coversheet.
-
-* see the folder for your solution below
 
 
 Scenario
