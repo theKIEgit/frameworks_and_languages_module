@@ -35,6 +35,18 @@ Marks Overview
 Your writing should be short, sharp, technical and meaningful.
 
 
+Submission Guidance
+-------------------
+
+* You will clone a public fork of:
+  * https://github.com/calaldees/frameworks_and_languages_module
+* You will be working in own public GitHub forked repository. At the datetime of the deadline a snapshot of your fork will automatically be taken. In addition, You need to formally submit a zip file with the contents of your repository to TurnItIn for a formal audit trail. You will be provided with a TurnItIn coversheet.
+
+* It is industry practice to keep technical documentation alongside program code in the same code repository
+* A markdown report template has been provided [`./technical_report.md`](https://github.com/calaldees/frameworks_and_languages_module/blob/main/technical_report.md)
+* You will edit/commit this markdown file in-place in your cloned fork repository. (do not rename the file)
+
+
 Scenario
 --------
 
@@ -47,17 +59,6 @@ Scenario
   * Advise on possible future technologies with rational/reasons
   
 Produce a summary technical report to the business directors (1600 words total)
-
-
-Report Template
----------------
-
-https://github.com/calaldees/frameworks_and_languages_module/blob/main/technical_report.md
-
-* It is industry practice to keep technical documentation alongside program code in the same code repository
-* A markdown report template has been provided `./technical_report.md`
-* You will edit this markdown file in-place in your cloned repository. (do not rename the file)
-* You will commit and submit this written report as part of your repository submission
 
 
 Report Contents
