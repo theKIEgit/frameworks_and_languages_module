@@ -39,12 +39,12 @@ Submission Guidance
 -------------------
 
 * You will clone a public fork of:
-  * https://github.com/calaldees/frameworks_and_languages_module
+    * https://github.com/calaldees/frameworks_and_languages_module
 * You will be working in own public GitHub forked repository. At the datetime of the deadline a snapshot of your fork will automatically be taken. In addition, You need to formally submit a zip file with the contents of your repository to TurnItIn for a formal audit trail. You will be provided with a TurnItIn coversheet.
 
 * It is industry practice to keep technical documentation alongside program code in the same code repository
 * A markdown report template has been provided [`./technical_report.md`](https://github.com/calaldees/frameworks_and_languages_module/blob/main/technical_report.md)
-* You will edit/commit this markdown file in-place in your cloned fork repository. (do not rename the file)
+* You will edit/commit `technical_report.md` markdown file in-place in your cloned fork repository. (do not rename the file)
 
 
 Scenario
@@ -74,64 +74,64 @@ Report Contents
 Describe the features of the frameworks and explain the problem that they are solving.
 
 * Headings
-  * 3 * Server framework features (3 * 3 marks per feature = 9 marks)
-  * 3 * Client framework features (3 * 3 marks per feature = 9 marks)
+    * 3 * Server framework features (3 * 3 marks per feature = 9 marks)
+    * 3 * Client framework features (3 * 3 marks per feature = 9 marks)
 * Each feature should contain (3 marks per feature)
-  1. Technical description of the feature (40ish words - 1 mark)
-    * No technical terminology == no mark
-    * poor spelling, grammar and sentence structure == no mark
-  2. A code block snippet example demonstrating the feature (1 mark)
-    * If you can additionally permalink to a snippet in your own code that would be additional supporting evidence
-  3. Explain the problem-this-is-solving/why/benefits/problems (40ish words - 1 mark)
-    * No technical terminology == no mark
-    * poor spelling, grammar and sentence structure == no mark
-  4. Provide reference urls to your sources of information about the feature
-    * references do not count towards word count
-    * No reference == No mark for this entire feature
+    1. Technical description of the feature (40ish words - 1 mark)
+        * No technical terminology == no mark
+        * poor spelling, grammar and sentence structure == no mark
+    2. A code block snippet example demonstrating the feature (1 mark)
+        * If you can additionally permalink to a snippet in your own code that would be additional supporting evidence
+    3. Explain the problem-this-is-solving/why/benefits/problems (40ish words - 1 mark)
+        * No technical terminology == no mark
+        * poor spelling, grammar and sentence structure == no mark
+    4. Provide reference urls to your sources of information about the feature
+        * references do not count towards word count
+        * No reference == No mark for this entire feature
 
 ### Language Features (12 Marks)
 
 Describe the features of the language and explain the problem that they are solving.
 
 * Headings
-  * 2 * Server language features (2 * 3 marks per feature = 6 marks)
-  * 2 * Client language features (2 * 3 marks per feature = 6 marks)
+    * 2 * Server language features (2 * 3 marks per feature = 6 marks)
+    * 2 * Client language features (2 * 3 marks per feature = 6 marks)
 * (see feature marks above)
 
 ### Critique of framework-less prototype (4 marks)
 
 * A technical critique of why one aspect of the the existing prototype implementation is not fit for business use
-  * `./example_server/` Server prototype critique *1 (2 marks)
-  * `./example_client/` Client prototype critique *1 (2 marks)
+    * `./example_server/` Server prototype critique *1 (2 marks)
+    * `./example_client/` Client prototype critique *1 (2 marks)
 * Each prototype critique should contain (2 marks per critique)
-  * A code snippet example demonstrating the feature (1 mark)
-  * Explain why this pattern is problematic (40ish words - 1 mark)
-    * No technical terminology == no mark
-    * poor spelling, grammar and sentence structure == no mark
+    * A code snippet example demonstrating the feature (1 mark)
+    * Explain why this pattern is problematic (40ish words - 1 mark)
+        * No technical terminology == no mark
+        * poor spelling, grammar and sentence structure == no mark
 
 ### Future Technology Recommendations (6 Marks)
 
 Future Technology Suggestions: Consider a 2 year technical expansion/deployment for freecycle-inc
 * Suggest *3 features of other frameworks or tools/technologies that might be useful in expanding the freecycle product
-  * Description of a feature or tool (40ish words - 1 mark)
-    * No technical terminology == no mark
-    * poor spelling, grammar and sentence structure == no mark
-  * Why/benefits/problems with using this (40ish words - 1 mark)
-    * No technical terminology == no mark
-    * poor spelling, grammar and sentence structure == no mark
-  * Provide reference urls - to your source of information about this technology
-    * references do not count towards word count
-    * No reference == No mark for this entire feature
+    * Description of a feature or tool (40ish words - 1 mark)
+        * No technical terminology == no mark
+        * poor spelling, grammar and sentence structure == no mark
+    * Why/benefits/problems with using this (40ish words - 1 mark)
+        * No technical terminology == no mark
+        * poor spelling, grammar and sentence structure == no mark
+    * Provide reference urls - to your source of information about this technology
+        * references do not count towards word count
+        * No reference == No mark for this entire feature
 
 
 Guidance
 --------
 
 * Every week a writing workshop will be provided in sessions.
-  * We will as a group refine our writing for individual sections above.
+    * We will as a group refine our writing for individual sections above.
 * Level of Expectation
-  * Realistically; You are not a lead developer. You are not expected to write this to a true industry standard. You are trying to demonstrate to an external examiner your knowledge and understanding of these technologies.
+    * Realistically; You are not a lead developer. You are not expected to write this to a true industry standard. You are trying to demonstrate to an external examiner your knowledge and understanding of these technologies.
 * Technical reports heavily used bullet points. You do not need to write in full english paragraphs all the time.
 * Your justifications need to be supported with references. 
-  * Show links to developer documentation, blog articles and case studies that support your technical assessment/recommendations.
-  * Note: with _Academic Writing_ it is an institutional policy to use Harvard style referencing. However; this assignment is not _Academic Writing_, This assignment is _Technical Writing_. You may use urls to refer to developer documentation with the commit-timestamp to your markdown document serving as a record of the access time.
+    * Show links to developer documentation, blog articles and case studies that support your technical assessment/recommendations.
+    * Note: with _Academic Writing_ it is an institutional policy to use Harvard style referencing. However; this assignment is not _Academic Writing_, This assignment is _Technical Writing_. You may use urls to refer to developer documentation with the commit-timestamp to your markdown document serving as a record of the access time.
