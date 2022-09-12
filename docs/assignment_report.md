@@ -42,7 +42,7 @@ Scenario
 * Your role is to advise and justify the technologies you have chosen to use for your implementation (from assignment 1)
 * Freecycle-Inc have an existing working prototype for their FreeCycle platform with tests.
 * You will need to 
-  * Justify the use of your proposed framework technologies
+  * Justify the use of your proposed technologies
   * Critique the current prototype
   * Advise on possible future technologies with rational/reasons
   
@@ -78,12 +78,14 @@ Describe the features of the frameworks and explain the problem that they are so
 * Each feature should contain (3 marks per feature)
   1. Technical description of the feature (40ish words - 1 mark)
     * No technical terminology == no mark
+    * poor spelling, grammar and sentence structure == no mark
   2. A code block snippet example demonstrating the feature (1 mark)
     * If you can additionally permalink to a snippet in your own code that would be additional supporting evidence
   3. Explain the problem-this-is-solving/why/benefits/problems (40ish words - 1 mark)
     * No technical terminology == no mark
+    * poor spelling, grammar and sentence structure == no mark
   4. Provide reference urls to your sources of information about the feature
-    * references do not count towards word count. 
+    * references do not count towards word count
     * No reference == No mark for this entire feature
 
 ### Language Features (12 Marks)
@@ -103,15 +105,21 @@ Describe the features of the language and explain the problem that they are solv
 * Each prototype critique should contain (2 marks per critique)
   * A code snippet example demonstrating the feature (1 mark)
   * Explain why this pattern is problematic (40ish words - 1 mark)
+    * No technical terminology == no mark
+    * poor spelling, grammar and sentence structure == no mark
 
 ### Future Technology Recommendations (6 Marks)
 
 Future Technology Suggestions: Consider a 2 year technical expansion/deployment for freecycle-inc
 * Suggest *3 features of other frameworks or tools/technologies that might be useful in expanding the freecycle product
   * Description of a feature or tool (40ish words - 1 mark)
+    * No technical terminology == no mark
+    * poor spelling, grammar and sentence structure == no mark
   * Why/benefits/problems with using this (40ish words - 1 mark)
+    * No technical terminology == no mark
+    * poor spelling, grammar and sentence structure == no mark
   * Provide reference urls - to your source of information about this technology
-    * references do not count towards word count. 
+    * references do not count towards word count
     * No reference == No mark for this entire feature
 
 
