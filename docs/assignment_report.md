@@ -112,6 +112,7 @@ Describe the features of the language and explain the problem that they are solv
 ### Future Technology Recommendations (6 Marks)
 
 Future Technology Suggestions: Consider a 2 year technical expansion/deployment for freecycle-inc
+
 * Suggest *3 features of other frameworks or tools/technologies that might be useful in expanding the freecycle product
     * Description of a feature or tool (40ish words - 1 mark)
         * No technical terminology == no mark
