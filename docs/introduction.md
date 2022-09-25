@@ -1,6 +1,3 @@
-* Introduction (2 hours) 10:00 to 12:00
-* IDE + Containers (2 hours) 13:00 to 15:00
-
 Introduction (2 hours)
 ============
 
@@ -47,7 +44,7 @@ By the end of the module students should be able to:
 2. Critically evaluate the effectiveness of a particular framework for an application and platform
 3. Synthesise a small digital artefact using a well-formed programming framework
 
-Whiteboard in half: words to describe
+Whiteboard in half: words to describe (10min)
 * What is a [programming language](https://en.wikipedia.org/wiki/Programming_language)?
 * What is a [software framework](https://en.wikipedia.org/wiki/Software_framework)?
 
@@ -58,7 +55,7 @@ This module will help develop an important part of your professional skill-set:
 
 * The ability to use a professional toolchain (CI)
 * Understand the basic elements of full stack web development
-  
+
 
 ### Definitions
 
@@ -113,10 +110,28 @@ https://b.socrative.com/login/student/
 
 
 
-Assessment 1 - Digital Artefact - Demo
+Assessment 1 - Digital Artefact - Familiarisation (1 hour)
 ------------------
 
-* Demo: The simple app
+### Read (10 min)
+
+TASK: Look at Assignment 1 - read it - discuss
+TASK: Look at Assignment 2 - read it - discuss
+
+
+### Demo
+
+Demo working server on gitpod
+* https://gitpod.io/#https://github.com/calaldees/frameworks_and_languages_module
+```bash
+make
+make run_example_server_client
+# https://8001-xxxx.ws-eu67.gitpod.io?api=https://8000-xxxxx.ws-eu67.gitpod.io
+```
+put link on blackboard - class interact
+
+
+### Overview
 
 * Implement Web App
   * Server Framework (data api service)
@@ -124,13 +139,12 @@ Assessment 1 - Digital Artefact - Demo
   * Client Layout Framework (styles + visuals)
 * Assignments
   * Set Today
-  * Assignment 1 - Digital Artifact - December
-  * Assignment 2 - Technical Report - January
+  * Assignment 1 - Digital Artifact - Due 12th December
+  * Assignment 2 - Technical Report - Due 9th January
 * Tools
   * GitPod + containers
   * OpenAPI Spec
 
-Mark breakdown
 
 ### Run it yourself (1 hour)
 
@@ -154,10 +168,15 @@ Demo:
 * The IDE
 * The Interaction (public port)
 * The tests
+    make test_example_server
+    make test_example_client
+# download video
 * GitPod shutdown and startup
   * 50 hours a month free
     * [GitHub Student Developer Pack](https://education.github.com/pack) - 100 hours with cccu address + cccu id 
 
+Task: Setup + Familiarise
+----
 1. (Fork and) run the project on GitPod
 2. Add an item with the web interface
 3. Run the tests
@@ -169,64 +188,11 @@ Demo:
 
 
 
-Development Environment + Containers (2 hours)
-====================================
-
-<sub>Seriously ... take notes ... </sub>
-
-* Complete working example for reference
-  * https://github.com/calaldees/gitpod_container_demo
-
-* Learning Objective
-  * Build Fundamental Skills
-    * Setup new GitPod environment bound to new repo
-      * `https://gitpod.io/#YOUR_REPO_HTTPS`
-    * Commit via commandline
-      * Edit README.md with GitPod link
-    * Understand how to Build a container
-      * Starting layer
-      * Layers and Cache
-        * Overlay FS (visualiser?)
-      * Entrypoint
-    * Understand how to Run a container
-      * Ports
-      * Volume mounts
-      * Clean container state
-    * Orchestrate multiple containers
 
 
-### Notes
 
-```bash
-docker build --tag http_server_python .
-docker images
-docker run --rm -it http_server_python /bin/sh
-curl https://raw.githubusercontent.com/calaldees/TeachProgramming/master/teachprogramming/static/projects/net/http_server.py -O
-# Native python (NOT IN CONTAINER!)
-python3 http_server.py
-# Explore public browser
-    FROM python:alpine
-    WORKDIR /app/
-    COPY *.py ./
-    ENTRYPOINT ["http_server.py"]  #DELIBERATE!
-docker run --rm -it --entrypoint /bin/sh http_server_python
-# rebuild?
-8000 not served?
-docker run --rm -it --publish 8000:8000 http_server_python
-
-java 19?
-jwebserver -b 0.0.0.0 -p 8000
-https://openjdk.java.net/jeps/408
-
-Makefile
-help/build/run
-
-git status
-.gitignore
-```
-
-
----
+Unsorted
+========
 
 
 
