@@ -2,9 +2,9 @@ MCOMD3PFL Programming Frameworks and Languages - Handbook
 =========================================================
  
 ## Study hours for the module
-Total 200 hours
-Number of contact hour and pattern of delivery: 50 hours 
-Number of hours when students are expected to study independently or amongst peers, with no direct academic contact: 150 hours of Practice learning and independent study
+* Total 200 hours
+* Number of contact hour and pattern of delivery: 50 hours 
+* Number of hours when students are expected to study independently or amongst peers, with no direct academic contact: 150 hours of Practice learning and independent study
 
 ## Module aims
 To develop the student’s understanding of the fundamental concepts of Programming Frameworks and Languages. This module supports the Implement and Operate elements of the CDIO model.
@@ -49,15 +49,16 @@ Return: Monday 30th January 2023, Turnitin
 ### Overview
 
 |Assignment|Section|Marks|
-|-|-|-|
-|Digital Artifact| Server framework implementation| 25|
-|Digital Artifact| Client framework implementation| 25|
-|Digital Artifact| Visual framework implementation| 10|
-|Technical Report| Server framework/language features   |15|
-|Technical Report| Client framework/language features   |15|
-|Technical Report| Critique of framework-less prototype | 4|
-|Technical Report| Future Recommendations               | 6|
-|||100|
+|----------|-------|----:|
+| Digital Artifact | Server framework implementation | 25 |
+| Digital Artifact | Client framework implementation | 25 |
+| Digital Artifact | Visual framework implementation | 10 |
+| Technical Report | Server framework/language features   | 15 |
+| Technical Report | Client framework/language features   | 15 |
+| Technical Report | Critique of framework-less prototype |  4 |
+| Technical Report | Future Recommendations               |  6 |
+| | | 100 |
+
 
 Table 1: Marks overview for all assignments
 
@@ -78,6 +79,7 @@ Plagiarism detection software may be used to produce similarity reports for both
 The course will consist of 44 hours of workshops with direct tuition and an additional 44 hours of supervised support. 
 Totalling of 88 hours of tutor support.
 The module will be broken into 11 workshops with 4 hours tuition and an additional 4 hours supervised support. It is expected (but not compulsory) that students use the additional supervised support time to apply the concepts conveys in the morning workshops.
+
 * Monday 26th September
 * Monday 3rd October
 * Monday 10th October
