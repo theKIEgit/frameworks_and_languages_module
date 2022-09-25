@@ -1,8 +1,6 @@
 Web Services
 ============
 
-Present languages (30min)
-
 
 Objectives
 ----------
@@ -102,6 +100,7 @@ Objectives
     * Servers can respond with a range of errors/messages (your fault 4xx, server fault 5xx)
     * HTTP can be used to return different types of data
 
+
 JSON
 ----
 
@@ -154,62 +153,3 @@ Run my example_server. Either with raw python or starting container.
 * [JSONPlaceholder/guide](https://jsonplaceholder.typicode.com/guide/)
     * Paste into browser or use with other languages
     * This shows how to do exactly what you've done in `curl` (GET, POST with json) with javascript
-
-
-Automated Tests and CI
-----------------------
-
-### Server Tests
-
-```bash
-# Start a second terminal and drag to a second columb
-# Run example_server with
-make run_example_server
-# or
-cd example_server && python3 main.py
-```
-```bash
-# Start a second terminal and drag to a second column
-cd test_server
-pip install pytest
-
-# run all tests
-pytest test_api.py
-
-# run all tests and drop into debugger on fail
-pytest test_api.py --pdb
-
-# run single test
-pytest test_api.py::test_item_post
-# add `breakpoint()` into python code to debug
-
-# Example of running tests an a server other than localhost:8000
-URI_SERVER=https://long_thing pytest test_api.py::test_FUNCTION_NAME
-```
-
-TASK: 
-* Run the example_server and run the tests against it.
-* Run a single test
-* Drop into a debugger with `breakpoint()`
-
-### Client
-
-* Run headless (on GitPod)
-    * Download/See video
-* Demo GitPod server and local cypress client
-    * Electron and rewind
-* More in future lectures
-
-
-Next Week
-=========
-
-Server Frameworks
-
-
-Unsorted
-========
-
-https://reqbin.com/
-https://reqbin.com/curl
-[Public REST APIs](https://documenter.getpostman.com/view/8854915/Szf7znEe)

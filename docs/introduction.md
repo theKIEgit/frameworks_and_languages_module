@@ -256,18 +256,8 @@ Initial audit notes
 
 Updated
 
-1. Which languages have you used
-  1. C#
-  2. Java
-  3. Python
-  4. Php
-  5. Golang
-  6. C
-  7. C++
-  8. Javascript
-  9. Ruby
 
-2. What is this? (not including subsets)
+1. What is this? (not including subsets)
   * ```json
       {"code": 200, "message": "something happened", "payload": ["a", "b", "c"]}
       ```
@@ -276,31 +266,50 @@ Updated
   3. json
   4. yml
   5. xml
-3. What are these?
+2. What are these?
   * GET, POST, DELETE, PUT
   1. Database operations
   2. Common language commands
   3. HTTP request methods
   4. Part of the OpenAPI spec
-4. What is the difference between virtualisation and containerisation?
+3. What is the difference between virtualisation and containerisation?
   * Virtualisation is simulating an entire machine, Containerisation is an isolated environment managed by the kernel
   * Virtualisation is the emulation of an operating system, Containerisation is a virtual system
   * Virtualisation runs inside another process, Containerisation is running on the host
   * Virtualisation runs on your local machine, Containerisation runs remotely
-5. What is an event loop?
+4. What is an event loop?
   1. A `while` loop
   2. A core game/ui loop that process's each frame in realtime
   3. A technique for handling user input efficiently at a low level
   4. A way for single threaded languages to mimic/utilise concurrency
-6. Which of these are _functional_ languages
-  1. PureScript
-  2. TypeScript
-  3. C#
-  4. Haskell
-  5. Elm
-  6. Prolog
-  7. Java
+5. Which of these is a _functional_ language
+  1. TypeScript
+  2. C#
+  3. Haskell
+  4. Prolog
+  5.  Java
+6. What are websockets used for?
+  1. Downloading files from websites
+  2. Used to serve websites sites via HTTP on a known port
+  3. Websockets are an abstract concept
+  4. Enabling browser based apps to have ongoing bi-directional communication
+7. `git pull --rebase` is used for
+  1. Refreshing a repository content with the upstream
+  2. Replaying remote commits over local changes to make a linear history
+  3. Pulling and merging remote commits
+  4. Rebase-ing creates a separate branch to merge changes
 
+
+9. Which languages have you used
+  5.  C#
+  6.  Java
+  7.  Python
+  8.  Php
+  9.  Golang
+  10. C
+  11. C++
+  12. Javascript
+  13. Ruby
 
 
 Notional machine of how twitter works?
