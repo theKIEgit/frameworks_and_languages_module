@@ -4,4 +4,5 @@ WORKDIR /data/
 
 COPY . .
 
-CMD ["jwebserver", "-b", "0.0.0.0", "-p", "8000"]
+ENTRYPOINT ["jwebserver", "-b", "0.0.0.0", "-p", "8000", "--directory"]
+CMD ["/"]

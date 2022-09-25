@@ -1,8 +1,8 @@
 FROM python:alpine
 
-WORKDIR /app/
+WORKDIR /data/
 
-COPY *.py ./
+COPY . .
 
-ENTRYPOINT ["python3", "http_server.py"]
+ENTRYPOINT ["python3", "-m", "http.server", "-b", "0.0.0.0", "--directory"]
 CMD ["./"]

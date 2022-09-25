@@ -1,4 +1,4 @@
-DOCKER_IMAGE:=http_server_python
+DOCKER_IMAGE:=custom_http_server_java
 
 help:
 	# This is some help

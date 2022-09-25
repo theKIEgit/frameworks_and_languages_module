@@ -15,7 +15,7 @@ Who am I?
     * A-level, Linux, networking, game programming. Part of transition from ICT to Computing.
 * 10 years Software engineering
     * 2 years - Lead developer of a Citizen Journalism startup
-    * 6 years - Global Radio (full stack web content management developer, android dev, Lead test and internal tooling engineer)
+    * 6 years - Global Radio (full stack web, android dev, lead test and internal tooling engineer)
     * 6 months - Financial investment platform CI infrastructure
     * 1.5 years - NHS Genome processing pipeline for cancer and rare disease analysis
 * 4 years Lecturer in Education (teacher training)
@@ -25,7 +25,7 @@ Who am I?
   * DMX Stage lighting and projector sys (with 3d stage visualiser)
   * Karaoke System for mobile phones
   * Lots of other rubbish
-  * Won a number of commercial hack events
+  * Won a number of commercial hack events (2009 to 2012)
 
 
 Module Overview
@@ -51,7 +51,7 @@ Whiteboard in half: words to describe
 * What is a [programming language](https://en.wikipedia.org/wiki/Programming_language)?
 * What is a [software framework](https://en.wikipedia.org/wiki/Software_framework)?
 
-The sign of an armature:
+The sign of an amateur:
 > _TECH_XYZ_ is rubbish
 This module will help develop an important part of your professional skill-set: 
 * The ability to discuss and reason about technology choices
@@ -59,6 +59,8 @@ This module will help develop an important part of your professional skill-set:
 * The ability to use a professional toolchain (CI)
 * Understand the basic elements of full stack web development
   
+
+### Definitions
 
 * Language
   * A formal structure to describe machine behaviour
@@ -76,7 +78,7 @@ This module will help develop an important part of your professional skill-set:
     * Hands-on each week with a range of tools
 2. Discussion
     * Real engineers can discuss/reason about technology
-    * (Hack time, coffee-area chat)
+    * Pair programming
 3. Multiple languages
   * [langauge_reference.html](https://computingteachers.uk/static/langauge_reference.html)
 
@@ -111,8 +113,8 @@ https://b.socrative.com/login/student/
 
 
 
-Assessment Demo
-----------------
+Assessment 1 - Digital Artefact - Demo
+------------------
 
 * Demo: The simple app
 
@@ -121,9 +123,9 @@ Assessment Demo
   * Client Framework (browser app logic)
   * Client Layout Framework (styles + visuals)
 * Assignments
-  * Set 27/09/2021 (Today)
-  * Assignment 1 01/11/2021
-  * Assignment 2 10/01/2022
+  * Set Today
+  * Assignment 1 - Digital Artifact - December
+  * Assignment 2 - Technical Report - January
 * Tools
   * GitPod + containers
   * OpenAPI Spec
@@ -159,9 +161,8 @@ Demo:
 1. (Fork and) run the project on GitPod
 2. Add an item with the web interface
 3. Run the tests
-
-
-4. Make a commit and see CI
+4. Add an item to another persons server
+5. Make a commit and see CI
 
 
 
@@ -258,58 +259,58 @@ Updated
 
 
 1. What is this? (not including subsets)
-  * ```json
-      {"code": 200, "message": "something happened", "payload": ["a", "b", "c"]}
-      ```
-  1. python
-  2. javascript
-  3. json
-  4. yml
-  5. xml
+    * ```json
+        {"code": 200, "message": "something happened", "payload": ["a", "b", "c"]}
+        ```
+    1. python
+    2. javascript
+    3. json (X)
+    4. yml
+    5. xml
 2. What are these?
-  * GET, POST, DELETE, PUT
-  1. Database operations
-  2. Common language commands
-  3. HTTP request methods
-  4. Part of the OpenAPI spec
+    * GET, POST, DELETE, PUT
+    1. Database operations
+    2. Common language commands
+    3. HTTP request methods (X)
+    4. Part of the OpenAPI spec
 3. What is the difference between virtualisation and containerisation?
-  * Virtualisation is simulating an entire machine, Containerisation is an isolated environment managed by the kernel
-  * Virtualisation is the emulation of an operating system, Containerisation is a virtual system
-  * Virtualisation runs inside another process, Containerisation is running on the host
-  * Virtualisation runs on your local machine, Containerisation runs remotely
+    * Virtualisation is simulating an entire machine, Containerisation is an isolated environment managed by the kernel (X)
+    * Virtualisation is the emulation of an operating system, Containerisation is a virtual system
+    * Virtualisation runs inside another process, Containerisation is running on the host
+    * Virtualisation runs on your local machine, Containerisation runs remotely
 4. What is an event loop?
-  1. A `while` loop
-  2. A core game/ui loop that process's each frame in realtime
-  3. A technique for handling user input efficiently at a low level
-  4. A way for single threaded languages to mimic/utilise concurrency
+    1. A `while` loop
+    2. A core game/ui loop that process's each frame in realtime
+    3. A technique for handling user input efficiently at a low level
+    4. A way for single threaded languages to mimic/utilise concurrency (X)
 5. Which of these is a _functional_ language
-  1. TypeScript
-  2. C#
-  3. Haskell
-  4. Prolog
-  5.  Java
+    1. TypeScript
+    2. C#
+    3. Haskell (X)
+    4. Prolog
+    5.  Java
 6. What are websockets used for?
-  1. Downloading files from websites
-  2. Used to serve websites sites via HTTP on a known port
-  3. Websockets are an abstract concept
-  4. Enabling browser based apps to have ongoing bi-directional communication
+    1. Downloading files from websites
+    2. Used to serve websites sites via HTTP on a known port
+    3. Websockets are an abstract concept
+    4. Enabling browser based apps to have ongoing bi-directional communication (X)
 7. `git pull --rebase` is used for
-  1. Refreshing a repository content with the upstream
-  2. Replaying remote commits over local changes to make a linear history
-  3. Pulling and merging remote commits
-  4. Rebase-ing creates a separate branch to merge changes
+    1. Refreshing a repository content with the upstream
+    2. Replaying local commits over remote changes to make a linear history (X)
+    3. Pulling and merging remote commits
+    4. Rebase-ing creates a separate branch to merge changes
+8. What is this?
+    * ```markdown
+        ## Title
+        paragraph
+        * thing1
+        * [example](http://example.com/)
+        ```
+    1. A linux file descriptor
+    2. Markdown (X)
+    3. LaTex
+    4. Python
 
-
-9. Which languages have you used
-  5.  C#
-  6.  Java
-  7.  Python
-  8.  Php
-  9.  Golang
-  10. C
-  11. C++
-  12. Javascript
-  13. Ruby
 
 
 Notional machine of how twitter works?
