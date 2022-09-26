@@ -115,8 +115,8 @@ Assessment 1 - Digital Artefact - Familiarisation (1 hour)
 
 ### Read (10 min)
 
-TASK: Look at Assignment 1 - read it - discuss
-TASK: Look at Assignment 2 - read it - discuss
+* TASK: Look at Assignment 1 - read it - discuss
+* TASK: Look at Assignment 2 - read it - discuss
 
 
 ### Demo
@@ -148,47 +148,39 @@ put link on blackboard - class interact
 
 ### Run it yourself (1 hour)
 
-* Demo: (15min)
-* Task: (30min)
-* QA
-
-<sub>Seriously ... make notes ... </sub>
-
 * https://gitpod.io/ create account with GutHub login
 * https://gitpod.io/#https://github.com/calaldees/frameworks_and_languages_module
 
 * Signup to GitPod
-  * DO NOT use `vscode-latest` it's broken
   * GitPod -> Stop Container !important
   * GitPod -> Color Theme -> Dark+ (recommended)
 
 Demo:
-* Fork (description)
-  * Allow CI
-* The IDE
-* The Interaction (public port)
-* The tests
-    make test_example_server
-    make test_example_client
-# download video
-* GitPod shutdown and startup
-  * 50 hours a month free
-    * [GitHub Student Developer Pack](https://education.github.com/pack) - 100 hours with cccu address + cccu id 
+1. The IDE
+2. The Interaction (public port)
+3. Add an item with the web interface
+  * Remember to add the querystring for the server `?api=` e.g. `https://8001-xxxx.ws-eu67.gitpod.io?api=https://8000-xxxxx.ws-eu67.gitpod.io`
+4. Access another persons public port + Add an item to another persons server
+5. Run the tests
+  * `make test_example_server`
+  * `make test_example_client`
+    * download video
 
 
 Task: Fork + Run + Commit
 ----
-1. Fork
+1. Fork your own copy of the repo (description)
+  * Allow CI
     * And enable _GitHub Actions/Workflows_
 2. Start a GitPod workspace for YOUR FORK `https://gitpod.io#PASTE_YOUR_GITHUB_FORK_URL_HERE`
-3. Add an item with the web interface
-    * Remember to add the querystring for the server `?api=` e.g. `https://8001-xxxx.ws-eu67.gitpod.io?api=https://8000-xxxxx.ws-eu67.gitpod.io`
-4. Run the tests
-5. Access another persons public port + Add an item to another persons server
-6. Make a commit to `/server/Dockerfile` and see CI
+3. Make a commit to `/server/Dockerfile` and see CI
+  * `git status`
+  * `git commit -a`
+  * `git push`
 
-
-
+* GitPod shutdown and startup
+  * 50 hours a month free
+    * [GitHub Student Developer Pack](https://education.github.com/pack) - 100 hours with cccu address + cccu id 
 
 
 
