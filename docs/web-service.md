@@ -104,7 +104,7 @@ Objectives
 JSON
 ----
 
-Moved to TeachProgramming -> Language Features
+Moved to [TeachProgramming -> Language Features](https://github.com/calaldees/TeachProgramming/blob/master/teachprogramming/static/projects/language_features/json.md)
 
 
 OpenAPI (30min)

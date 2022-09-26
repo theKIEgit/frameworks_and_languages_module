@@ -175,13 +175,17 @@ Demo:
   * 50 hours a month free
     * [GitHub Student Developer Pack](https://education.github.com/pack) - 100 hours with cccu address + cccu id 
 
-Task: Setup + Familiarise
+
+Task: Fork + Run + Commit
 ----
-1. (Fork and) run the project on GitPod
-2. Add an item with the web interface
-3. Run the tests
-4. Add an item to another persons server
-5. Make a commit and see CI
+1. Fork
+    * And enable _GitHub Actions/Workflows_
+2. Start a GitPod workspace for YOUR FORK `https://gitpod.io#PASTE_YOUR_GITHUB_FORK_URL_HERE`
+3. Add an item with the web interface
+    * Remember to add the querystring for the server `?api=` e.g. `https://8001-xxxx.ws-eu67.gitpod.io?api=https://8000-xxxxx.ws-eu67.gitpod.io`
+4. Run the tests
+5. Access another persons public port + Add an item to another persons server
+6. Make a commit to `/server/Dockerfile` and see CI
 
 
 

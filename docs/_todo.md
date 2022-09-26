@@ -611,3 +611,23 @@ https://reqbin.com/
 https://reqbin.com/curl
 [Public REST APIs](https://documenter.getpostman.com/view/8854915/Szf7znEe)
 
+
+---
+
+
+* https://oai.github.io/Documentation/start-here.html
+* https://openapi.tools/
+* https://swagger.io/specification/
+* https://redocly.github.io/redoc/
+
+
+Consider OpenAPI testing with
+https://schemathesis.readthedocs.io/en/stable/python.html
+
+
+Setup
+-----
+
+* Browser
+	* Allow popups for `https://gitpod.io`
+
