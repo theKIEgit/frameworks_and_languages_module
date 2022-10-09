@@ -36,19 +36,30 @@ Types of Web Applications (10min)
     * Older model - invented when browsers were less capable and had less features
     * Loads/Requests entire new page every link/click/action
     * Server template rendering
+    * Example
+        * [Django](https://www.djangoproject.com/) python
+        * [Rails](https://rubyonrails.org/) ruby
 * Single Page Webapp 
     * (majority of webapps after 2014)
     * Client Application supported with Server API
     * Loads js app once on first visit - uses server api on some click/action
     * Client/Browser template rendering (shadow-dom)
     * Can support realtime bi-direction communication with web-sockets
+    * Example
+        * [React] javascript
+        * [angular] javascript
+        * [vue] javascript
 * Static Site Generation 
     * (grew significantly in popularity form 2014)
     * Generate entire (static) site (efficiently) on data change
+    * Example
+        * [jekyll](https://jekyllrb.com/) ruby
+        * [hyde](https://hyde.github.io/) python
+        * [hugo](https://gohugo.io/) golang
 
 
-Document Object Model (DOM) (15min)
----------------------------
+Browser: Document Object Model (DOM) (30min)
+--------------------------------------------
 
 ```javascript
 // Open a blank browser tab and bring up devtools (F12)
@@ -85,18 +96,57 @@ document.body.appendChild(text)  // you still have a variable `text` and can re-
 Further Reading
 * MDN [Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 
+Questions
+* How many lines of code do you need to add each `li`. 
+    * Do you think this could be reduced?
+    * Hint: client frameworks will have a way of reducing this
+* Understand
+    * DOM functions `createElement`, `appendChild`, `textContent`, `data`, `querySelector`
+    * Creating DOM elements in plain javascript is cumbersome and hard to follow
+    * `data` attributes and how they can be selected/found with query (IMPORTANT CONCEPT)
+
+
+<details>
+
+```javascript
+const $ul = document.createElement("ul")
+document.body.appendChild($ul)
+
+let $li = undefined
+
+$li = document.createElement("li")
+$ul.appendChild($li)
+$li.textContent = "Bread"
+$li.dataset.id = "a"
+
+$li = document.createElement("li")
+$ul.appendChild($li)
+$li.textContent = "Milk"
+$li.dataset.id = "b"
+
+$li = document.createElement("li")
+$ul.appendChild($li)
+$li.textContent = "Eggs"
+$li.dataset.id = "c"
+
+document.querySelector(`[data-id='b']`).remove()
+```
+</details>
+
 
 Client Frameworks (5min)
 -----------------
 
 Why?
 
-> every time we change our application’s state, we need to update the UI to match.
-
 * Separate out:
     * State
-    * Template/Visuals/Look
+        * (You have all of your variables/state in one object - not loose variables in js code)
     * Logic/Actions
+        * (You do not change the state - the framework calls your functions to manipulate the state when needed)
+    * Template/Visuals/Look
+        * (You do not manipulate/manage the DOM, the framework does)
+* Every time we change our application’s _state_, with our _actions_ (functions), we need to update the _template_ (UI/DOM) to match.
 * Considering
     * Async/multithreading (things happen at different times and take indeterminate time)
 
@@ -160,11 +210,6 @@ function deleteItem(item_id) {
     .catch(err => console.error(err));
 }
 ```
-(
-my first demo of this on 01/11/2021 with the class failed because of a bug - 
-https://github.com/calaldees/frameworks_and_languages_module/commit/44cd9d126ed8cc7f7445de5fc1c3ac500de411bf
-This is why the prototype is NOT fit for production use
-)
 
 
 Helpers for Assignment 2: Client (notes)
@@ -242,6 +287,7 @@ Anatomy of basic html page (for upcoming tutorials)
 </html>
 ```
 
+
 HyperApp Tutorial (45min)
 -----------------
 
@@ -259,16 +305,15 @@ HyperApp Tutorial (45min)
 * Altering the state requires an Action function
 
 
+
 Vue.js (45min)
 ------
 
-* [v3.vuejs.org](https://v3.vuejs.org/)
+* [vuejs.org](https://vuejs.org/)
     * See _Why Vue.JS_ video (3min)
-    * 20k
-* v2 [vuejs.org](https://vuejs.org/)
-    * Video on main page - code summary example (5min)
-    * Note: this is Vue2
-* [Vue 3: Tutorial](https://v3.vuejs.org/guide/introduction.html)
+    * [vuejs.org/tutorial](https://vuejs.org/tutorial/)
+    * [vuejs.org/examples](https://vuejs.org/examples/)
+* [Vue 3: Guide](https://vuejs.org/guide/introduction.html)
     * "Hello World" as [single HTML file](https://github.com/calaldees/frameworks_and_languages_module/tree/main/examples/client/vue_test)
         * Can be a local html file or can be served from GitPod (see `Makefile`)
 
@@ -282,16 +327,39 @@ Vue.js (45min)
     * 20min video (1 hour to do?) video course for complete shopping basket with repo example
 
 
+
 React (1 hour)
 -----
 
 Facebook
 200kb
 
-* [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
+* Beta [beta.reactjs.org/learn](https://beta.reactjs.org/learn)
+    * (Beta; Looks like a better tutorial, but incomplete, so I have some more bits below)
+* Setup
+    * `npx create-react-app my-app` && `cd my-app` && `npm start`
+    * `rm src/*`
+    * `index.js`
+        * ```javascript 
+            import React from 'react';
+            import ReactDOM from 'react-dom/client';
+
+            import RootComponent from './myapp';
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<RootComponent />);
+            ```
+    * `myapp.js` -> copy `MyButton` and `MyApp` example from [beta.reactjs.org/learn](https://beta.reactjs.org/learn)
+* Old [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
+    * How to
+        1. Copy `index.js` from tutorial into `tictactoe.js`. Replacing the `cont root ...; root.render` -> `export default Game`
+        2. `import RootComponent from './tictactoe';`
     * Build O's and X's
-* Start GitPod template - `template-typescript-react`
-    * https://gitpod.io/#https://github.com/gitpod-io/template-typescript-react
+    * Follow tutorial and stop at _Adding Time Travel_ (The history is very cool though)
+
+<details>
+<summary>old instructions</summary>
+
 * Setup
     * `.env`
         * ```
@@ -305,12 +373,13 @@ Facebook
     * From [React Tutorial: Setup Option 2: Local Development Environment](https://reactjs.org/tutorial/tutorial.html#setup-option-2-local-development-environment)
         * `index2.js` copy from source (edit line with `index.css` -> `index2.css`)
         * `index2.css` copy from source
-* Follow tutorial and stop at _Adding Time Travel_
-    * The history is very cool
+</details>
 
 ### Concepts
 * Compiler transforms _inline html_ into javascript code to dynamically create elements
     * `jsx` files
+    * Q: What problem is `jsx` trying to solve
+        * [React tutorial; what is react](https://reactjs.org/tutorial/tutorial.html#what-is-react) -> see babel
 * State separate from components
 * Lifting state up
     * Components do not communicate with each other (except though shared functions/actions)
@@ -321,8 +390,8 @@ Facebook
 * [5 Steps to THINK in React](https://www.codestackr.com/blog/5-steps-to-think-in-react/)
 
 
-Further Reading
-----------------
+Client Further Reading
+----------------------
 
 * [Introduction to client-side frameworks](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
 * [Sizes of JS frameworks, just minified + minified and gzipped, (React, Angular 2, Vue, Ember)](https://gist.github.com/Restuta/cda69e50a853aa64912d)
@@ -334,10 +403,14 @@ Further Reading
     * [fritz2](https://www.fritz2.dev/) Kotlin
     * [WebApps with PureScript & RactiveJS](https://blog.brakmic.com/webapps-with-purescript-and-ractivejs/)
 
-TODO
-====
+
+Other Client frameworks
+-----------------------
+
+These looks cool. I've not investigated them.
 
 * [solid.js](https://www.solidjs.com/)
     * > Solid follows the same philosophy as React with unidirectional data flow, read/write segregation, and immutable interfaces. It however has a completely different implementation that forgoes using a Virtual DOM.
     * Fragments, Portals, Context, Suspense, Error Boundaries, Lazy Components, Async & Concurrent Rendering, Implicit Delegation, SSR & Hydration, Directives
+    * See "Intro to Solid is 100 Seconds" video on main page
 * [Fresh](https://fresh.deno.dev/)
