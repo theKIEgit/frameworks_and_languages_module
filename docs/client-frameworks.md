@@ -11,18 +11,19 @@ Objectives
     * react
 
 
-Server Frameworks (15min)
------------------
-
-* Tell me about Sever side frameworks
-
-
 Demo Client Example (15min)
 -------------------
 
-Simplified requirements
-
-And cypress tests
+* cypress tests
+    * `make run_example_server_client`
+    * `make test_example_client`
+    * `make test_client`
+    * Safety net (example_server)
+        * You don't have to complete a working server before starting the client
+        * `run_your_client_with_example_server`
+        * `test_your_client_with_example_server`
+    * Running on GitHub Actions
+* GitHub FETCH UPSTREAM!!!!
 
 
 
@@ -288,34 +289,17 @@ Anatomy of basic html page (for upcoming tutorials)
 ```
 
 
-HyperApp Tutorial (45min)
------------------
-
-* [Hyperapp](https://github.com/jorgebucaran/hyperapp)
-    * Tiny 1k framework
-* Try _Todo example_ in CodePen
-* [Tutorial](https://github.com/jorgebucaran/hyperapp/blob/main/docs/tutorial.md)
-    * "Hello World" as [single HTML file](https://github.com/calaldees/frameworks_and_languages_module/tree/main/examples/client/hyperapp)
-        * Can be a local html file or can be served from GitPod (see `Makefile`)
-
-### Concepts
-* html elements are generated with the `h()` function
-    * Templates/view built with functions
-* State, View and Actions are separate
-* Altering the state requires an Action function
-
-
-
 Vue.js (45min)
 ------
 
 * [vuejs.org](https://vuejs.org/)
     * See _Why Vue.JS_ video (3min)
+    * [vuejs.org/guide/quick-start.html#using-vue-from-cdn](https://vuejs.org/guide/quick-start.html#using-vue-from-cdn)
     * [vuejs.org/tutorial](https://vuejs.org/tutorial/)
     * [vuejs.org/examples](https://vuejs.org/examples/)
-* [Vue 3: Guide](https://vuejs.org/guide/introduction.html)
-    * "Hello World" as [single HTML file](https://github.com/calaldees/frameworks_and_languages_module/tree/main/examples/client/vue_test)
-        * Can be a local html file or can be served from GitPod (see `Makefile`)
+* Example
+    * [frameworks_and_languages_module/examples/client/vue_test](https://github.com/calaldees/frameworks_and_languages_module/tree/main/examples/client/vue_test)
+    * You could choose to use the `npm init vue` method. See react example for tips on containerising
 
 ### Concepts
 * State, View and Actions are separate
@@ -326,9 +310,33 @@ Vue.js (45min)
 * [VueMastery - Intro to Vue 3](https://www.vuemastery.com/courses/intro-to-vue-3/intro-to-vue3/) 
     * 20min video (1 hour to do?) video course for complete shopping basket with repo example
 
+### Hint for assignment
+```html
+<!-- https://vuejs.org/guide/essentials/event-handling.html#event-modifiers -->
+<!-- the submit event will no longer reload the page -->
+<form @submit.prevent="onSubmit"></form>
+```
 
 
-React (1 hour)
+HyperApp Tutorial (45min)
+-----------------
+
+* [Hyperapp](https://github.com/jorgebucaran/hyperapp)
+    * Tiny 1k framework
+* Try _Todo example_ in CodePen
+* [Tutorial](https://github.com/jorgebucaran/hyperapp/blob/main/docs/tutorial.md)
+* Example
+    * [frameworks_and_languages_module/examples/client/hyperapp](https://github.com/calaldees/frameworks_and_languages_module/tree/main/examples/client/hyperapp)
+
+### Concepts
+* html elements are generated with the `h()` function
+    * Templates/view built with functions
+* State, View and Actions are separate
+* Altering the state requires an Action function
+
+
+
+React (1hour)
 -----
 
 Facebook
