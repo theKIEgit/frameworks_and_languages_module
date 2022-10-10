@@ -421,4 +421,6 @@ These looks cool. I've not investigated them.
     * > Solid follows the same philosophy as React with unidirectional data flow, read/write segregation, and immutable interfaces. It however has a completely different implementation that forgoes using a Virtual DOM.
     * Fragments, Portals, Context, Suspense, Error Boundaries, Lazy Components, Async & Concurrent Rendering, Implicit Delegation, SSR & Hydration, Directives
     * See "Intro to Solid is 100 Seconds" video on main page
+* [Elm](https://elm-lang.org/)
+    * Elm is a functional language that compiles to JavaScript. It helps you make websites and web apps. It has a strong emphasis on simplicity and quality tooling.
 * [Fresh](https://fresh.deno.dev/)
