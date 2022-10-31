@@ -5,10 +5,6 @@ const port = 8000
 const { body, validationResult } = require('express-validator');
 
 app.use(express.json());
-app.use(cors({
-  origin: 'http://localhost:8001',
-  methods: ['GET','POST','DELETE', 'OPTIONS']
-}));
 
 ///https://expressjs.com/en/resources/middleware/cors.html
 
@@ -37,7 +33,7 @@ app.get('/item/:id', (req,res) => {
 //npm install express-validator
 ///Tests server with index
 app.get('/', (req, res) => {
-  //res.sendFile('index.html', {root: '/workspace/frameworks_and_languages_module/client/'})
+  res.sendFile('index.html', {root: '/workspace/frameworks_and_languages_module/client/'})
 })
 
 
@@ -77,6 +73,7 @@ app.delete('/item/:id', (req,res) => {
     //res.status(404).send("Sorry can't find that!")
 })
 
+app.options('*', cors())
 
 ///Shows port
 app.listen(port, () => {
