@@ -1,5 +1,12 @@
-FROM alpine
+FROM node:alpine
 
-# helllo
+WORKDIR /app/
+COPY package.json ./
+RUN npm install
+RUN npm install express-validator
+RUN npm install cors
 
-#WORKDIR /app/
+
+COPY . .
+
+ENTRYPOINT ["node", "server.js"]
