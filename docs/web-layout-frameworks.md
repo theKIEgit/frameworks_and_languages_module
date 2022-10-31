@@ -236,26 +236,26 @@ Bootstrap 5.2
     * Responsive
         * Mobile simulation in devtools
         * Resize window
-        * Breakpoints https://getbootstrap.com/docs/5.1/layout/breakpoints/
+        * Breakpoints https://getbootstrap.com/docs/5.2/layout/breakpoints/
             * sm, md, lg
         * Grid
-            * https://getbootstrap.com/docs/5.1/layout/grid/
+            * https://getbootstrap.com/docs/5.2/layout/grid/
             * 12 Column system (base 12 rocks!)
         * Utilities
             * Try not to write your own css where possible - use the framework tools
-            * https://getbootstrap.com/docs/5.1/utilities/spacing/
-            * https://getbootstrap.com/docs/5.1/utilities/borders/
+            * https://getbootstrap.com/docs/5.2/utilities/spacing/
+            * https://getbootstrap.com/docs/5.2/utilities/borders/
         * Cards
-            * https://getbootstrap.com/docs/5.1/components/card/
+            * https://getbootstrap.com/docs/5.2/components/card/
         * Navbar
-            * https://getbootstrap.com/docs/5.1/components/navbar/
+            * https://getbootstrap.com/docs/5.2/components/navbar/
             * fixed top?
         * Spinners - for loading
-            * https://getbootstrap.com/docs/5.1/components/spinners/
+            * https://getbootstrap.com/docs/5.2/components/spinners/
         * Forms
             * validation
-            * https://getbootstrap.com/docs/5.1/forms/validation/
-            * https://getbootstrap.com/docs/5.1/forms/floating-labels/
+            * https://getbootstrap.com/docs/5.2/forms/validation/
+            * https://getbootstrap.com/docs/5.2/forms/floating-labels/
         * Toast
         * ScrollSpy
     * [Icons](https://icons.getbootstrap.com/)
