@@ -34,19 +34,11 @@ app.get('/items/', (req,res) => {
 })
 
 app.get('/item/:id', (req,res) => {
-    var hasNoItems = Object.keys(items).length == 0;
-    if (hasNoItems) {
-      //items.js contains no items => return information to user via json response
-      return res.status(200).json({ msg: `Successful Operation. No items found.` });
+    if (Object.keys(items).length == 0) {
+      return res.status(200).send("Found")
     }
-    //initialising search id
-    var searchId = req.params.itemId;
-    //gets all item ids into an array
-    var itemIds = Object.keys(items);
-
-    if (!itemIds.includes(searchId)) {
-      //items does not contain any items with that search id
-      res.status(404).json({ msg: 'Item not found' });
+    if (!Object.keys(items).includes( req.params.itemId)) {
+      res.status(404).send("Item not found")
     }
   else{
     res.status(200).json(filteredItems)
@@ -94,7 +86,7 @@ app.options('*', cors())
 
 ///Shows port
 app.listen(port, () => {
-  console.log('Example app listening on port ${port}')
+  console.log(`Example app listening on port ${port}`)
   process.on('SIGINT', function() {process.exit()})
 })
 
