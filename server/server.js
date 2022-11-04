@@ -34,17 +34,14 @@ app.get('/items/', (req,res) => {
 })
 
 app.get('/item/:id', (req,res) => {
-    if (Object.keys(items).length == 0) {
-      return res.status(200).send("Found")
-    }
-    if (!Object.keys(items).includes(req.params.itemId)) {
-      res.status(404).send("Item not found")
-    }
+  var itemID = parseInt(req.params.id)
+  if(items.hasOwnProperty(itemID)){
+    res.status(204).json({msg: "Ok"})
+  }
   else{
-    res.status(200).json(Object.keys(req.params.id))
+    res.status(404).json({msg: "Item not found"})
   }
 })
-
 
 ///Adds to list, uses express validation to check for invalid inputs
 app.post("/item/",
@@ -69,12 +66,11 @@ app.post("/item/",
 
 app.get
 
-
 ///Deletes from list
 app.delete('/item/:id', (req,res) => { 
-var itemID = parseInt(req.params.id);
+var itemID = parseInt(req.params.id)
 if(items.hasOwnProperty(itemID)){
-  delete items[itemID];
+  delete items[itemID]
   res.status(204).json({msg: "Ok"})
 }
 else{
@@ -83,7 +79,6 @@ else{
 })
 
 app.options('*', cors())
-
 
 ///Shows port
 app.listen(port, () => {
