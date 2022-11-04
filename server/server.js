@@ -37,11 +37,11 @@ app.get('/item/:id', (req,res) => {
     if (Object.keys(items).length == 0) {
       return res.status(200).send("Found")
     }
-    if (!Object.keys(items).includes( req.params.itemId)) {
+    if (!Object.keys(items).includes(req.params.itemId)) {
       res.status(404).send("Item not found")
     }
   else{
-    res.status(200).json(filteredItems)
+    res.status(200).json(Object.keys(req.params.id))
   }
 })
 
@@ -56,6 +56,8 @@ app.post("/item/",
     function (req, res) {
     if(validationResult(req).isEmpty()){
       req.body.id = Object.keys(items).length + 1
+      req.body.date_from = new Date().toISOString()
+      req.body.date_to = new Date().toISOString()
       items[Object.keys(items)[Object.keys(items).length +1 ]]=req.body
       //auto date, id need to be added
       res.status(201).json(req.body)
@@ -65,20 +67,19 @@ app.post("/item/",
     }
 })
 
-
 app.get
 
 
 ///Deletes from list
 app.delete('/item/:id', (req,res) => { 
-    if (items[Object.keys(req.params.id)] === undefined){
-      res.status(404).send("Item not found")
-  }
-    else{
-      delete items[req.params.id]        
-      //items[Object.keys(req.params.id)].delete(Object.keys)
-      return res.status(204).send("Ok")
-  }
+var itemID = parseInt(req.params.id);
+if(items.hasOwnProperty(itemID)){
+  delete items[itemID];
+  res.status(204).json({msg: "Ok"})
+}
+else{
+  res.status(404).json({msg: "Item not found"})
+}  
 })
 
 app.options('*', cors())
