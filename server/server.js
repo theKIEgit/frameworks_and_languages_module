@@ -2,14 +2,17 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const port = 8000
+
+//Links to items file
 const items = require('./items')
+
+//Used to validate inputs on post
 const { body, validationResult } = require('express-validator');
 
 app.use(express.json());
 
 //npm install
 //node server.js
-//npm install express-validator
 
 /*
 Used to test
@@ -63,6 +66,7 @@ app.post("/item/",
       var nextID = itemsTopIndex + 1
       var date = new Date().toISOString()
 
+      //New item object, dates are generated
       items[nextID] = {
         id: nextID,
         user_id: req.body.user_id,
