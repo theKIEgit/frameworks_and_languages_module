@@ -36,7 +36,7 @@ app.get('/items/', (req,res) => {
 app.get('/item/:id', (req,res) => {
   var itemID = parseInt(req.params.id)
   if(items.hasOwnProperty(itemID)){
-    res.status(204).json({msg: "Ok"})
+    res.status(200).json({msg: "Ok"})
   }
   else{
     res.status(404).json({msg: "Item not found"})
@@ -52,17 +52,26 @@ app.post("/item/",
     body("lon").notEmpty(),
     function (req, res) {
     if(validationResult(req).isEmpty()){
-      req.body.id = Object.keys(items).length + 1
-      req.body.date_from = new Date().toISOString()
-      req.body.date_to = new Date().toISOString()
-      items[Object.keys(items)[Object.keys(items).length +1 ]]=req.body
-      //auto date, id need to be added
-      res.status(201).json(req.body)
+      var maxIndex = Math.max.apply(null,Object.keys(items));
+      var nextID = maxIndex + 1;
+
+      items[nextID] = {
+        id: nextID,
+        user_id: req.body.user_id,
+        keywords: req.body.keywords,
+        description: req.body.description,
+        image: req.body.image,
+        lat: req.body.lat,
+        lon: req.body.lon,
+      }
+      res.status(201).json(items[nextID])
     }
     else {   
       res.status(405).send("Invalid input - some input fields may be missing")
     }
 })
+
+//functions for auto generating data
 
 app.get
 
