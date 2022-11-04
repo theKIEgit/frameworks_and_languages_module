@@ -7,9 +7,6 @@ const { body, validationResult } = require('express-validator');
 
 app.use(express.json());
 
-///https://expressjs.com/en/resources/middleware/cors.html
-
-
 //npm install
 //node server.js
 //npm install express-validator
@@ -30,16 +27,25 @@ app.get('/', (req, res) => {
 })
 
 app.get('/items/', (req,res) => {
-  res.status(200).json(items)
+  //Puts dictionary into a list to be displayed
+  tempStorage = []
+
+  //Loops through items list and adds each item into the temp list
+  for (let num of Object.values(items)) {
+    tempStorage.push(num);
+  }
+  //Outputs the temporary list
+  res.status(200).json(tempStorage)
 })
 
+//Gets specific item using an id
 app.get('/item/:id', (req,res) => {
   var itemID = parseInt(req.params.id)
   if(items.hasOwnProperty(itemID)){
-    res.status(200).json({msg: "Ok"})
+    res.json(items[itemID])
   }
   else{
-    res.status(404).json({msg: "Item not found"})
+    res.status(404).send("Item not found")
   }
 })
 
@@ -52,8 +58,10 @@ app.post("/item/",
     body("lon").notEmpty(),
     function (req, res) {
     if(validationResult(req).isEmpty()){
-      var maxIndex = Math.max.apply(null,Object.keys(items));
-      var nextID = maxIndex + 1;
+      //Line taken from Resource 3 to get the max index on the array
+      var itemsTopIndex = Math.max.apply(null, Object.keys(items))
+      var nextID = itemsTopIndex + 1
+      var date = new Date().toISOString()
 
       items[nextID] = {
         id: nextID,
@@ -63,6 +71,8 @@ app.post("/item/",
         image: req.body.image,
         lat: req.body.lat,
         lon: req.body.lon,
+        date_from: date ,
+        date_to: date
       }
       res.status(201).json(items[nextID])
     }
@@ -71,8 +81,6 @@ app.post("/item/",
     }
 })
 
-//functions for auto generating data
-
 app.get
 
 ///Deletes from list
@@ -80,10 +88,10 @@ app.delete('/item/:id', (req,res) => {
 var itemID = parseInt(req.params.id)
 if(items.hasOwnProperty(itemID)){
   delete items[itemID]
-  res.status(204).json({msg: "Ok"})
+  res.status(204).send("Ok")
 }
 else{
-  res.status(404).json({msg: "Item not found"})
+  res.status(404).send("Item not found")
 }  
 })
 
@@ -95,6 +103,9 @@ app.listen(port, () => {
   process.on('SIGINT', function() {process.exit()})
 })
 
-app.all('*', (req, res) => {
-  res.status(404).send('404! Page not found');
-})
+/*
+Resources used in project
+1: https://stackoverflow.com/questions/34053715/how-to-output-date-in-javascript-in-iso-8601-without-milliseconds-and-with-z
+2: https://expressjs.com/en/resources/middleware/cors.html
+3: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+*/
