@@ -64,7 +64,9 @@ app.post("/item/",
       //Line taken from Resource 3 to get the max index on the array
       var itemsTopIndex = Math.max.apply(null, Object.keys(items))
       var nextID = itemsTopIndex + 1
-      var date = new Date().toISOString()
+      //add reference link for date//
+      var date = new Date().toJSON().slice(0,10)
+
 
       //New item object, dates are generated
       items[nextID] = {
