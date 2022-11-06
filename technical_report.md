@@ -8,7 +8,7 @@ Server Framework Features
 -------------------------
 
 ### (Routing)
-
+(Redo this gibberish)
 The routing feature allows defined URL endings alongside specified http requests to be linked to a specific function, each route can have multiple http requests and therefore have multiple functionalities linked to a matched URL.
 
 ```js
@@ -25,7 +25,7 @@ Routing is beneficial as it enables us to create modular route handlers which is
 https://expressjs.com/en/guide/routing.html
 
 ### (Middleware)
-
+(Redo this gibberish)
 Middleware are functions that have access to the req and res in an application, it is executed after the server receives a request and before a response is sent.
 Express is constructed on multiple middleware functions stringed together.
 
