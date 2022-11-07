@@ -7,37 +7,30 @@ const port = 8000
 const items = require('./items')
 
 //Used to validate inputs on post
-const { body, validationResult } = require('express-validator');
+const { body, validationResult } = require('express-validator')
 
-app.use(express.json());
-
-//npm install
-//node server.js
-
-/*
-Used to test
-curl -v -X POST  http://localhost:8000/item -H "Content-Type: application/json" -d '{"user_id": "user1234", "keywords": [ "hammer", "nails", "tools"],   "description": "A hammer and nails set",  "image": "https://placekitten.com/200/300",   "lat": 51.2798438,"lon": 1.0830275 }'
-curl -v -X GET http://localhost:8000/items
-curl -v -X GET http://localhost:8000/item/0
-curl -v -X DELETE  http://localhost:8000/item/1
-curl -v -X OPTIONS http://localhost:8000/
-*/
+app.use(express.json())
 
 ///Tests server with index
 app.get('/', (req, res) => {
-  //res.status(200).json(Item)
-  res.sendFile('index.html', {root: '/workspace/frameworks_and_languages_module/client/'})
+  res.send("Hello")
+  //res.sendFile('index.html', {root: '/workspace/frameworks_and_languages_module/client/'})
 })
 
-app.get('/items/', (req,res) => {
+app.get('/items', (req,res) => {
   //Puts dictionary into a list to be displayed
   tempStorage = []
 
   //Loops through items list and adds each item into the temp list
   for (let num of Object.values(items)) {
-    tempStorage.push(num);
+    tempStorage.push(num)
   }
-  //Outputs the temporary list
+  //Checks if there is a query string for user_id
+  if(req.query.user_id){
+    const search = req.query.user_id
+    //Used resource 4 to assist me
+    tempStorage = tempStorage.filter(i => i.user_id === search)
+  }
   res.status(200).json(tempStorage)
 })
 
@@ -66,7 +59,6 @@ app.post("/item/",
       var nextID = itemsTopIndex + 1
       //add reference link for date//
       var date = new Date().toJSON().slice(0,10)
-
 
       //New item object, dates are generated
       items[nextID] = {
@@ -114,4 +106,5 @@ Resources used in project
 1: https://stackoverflow.com/questions/34053715/how-to-output-date-in-javascript-in-iso-8601-without-milliseconds-and-with-z
 2: https://expressjs.com/en/resources/middleware/cors.html
 3: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+4: https://stackoverflow.com/questions/47072272/how-to-find-object-in-object-array-in-node-js
 */
