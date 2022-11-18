@@ -46,13 +46,26 @@ https://www.geeksforgeeks.org/middleware-in-express-js/
 
 
 
-### (name of Feature 3)
+### Templating
 
-(Technical description of the feature - 40ish words - 1 mark)
-(A code block snippet example demonstrating the feature - 1 mark)
+A template allows static template files to be used in the application - Need to complete
+```html
+html
+  head
+    title= title
+  body
+    h1= message
+```
+
+```js
+app.get('/', (req, res) => {
+  res.render('index', { title: 'Hey', message: 'Hello there!' })
+})
+```
+
 (Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
 (Provide reference urls to your sources of information about the feature - required)
-
+https://expressjs.com/en/guide/using-template-engines.html
 
 Server Language Features
 -----------------------
