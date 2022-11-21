@@ -11,6 +11,10 @@ const { body, validationResult } = require('express-validator')
 
 app.use(express.json())
 
+app.use(cors({
+  methods: ['GET','POST','DELETE','OPTIONS']
+}))
+
 ///Tests server with index
 app.get('/', (req, res) => {
   res.send("Hello")
@@ -18,6 +22,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/items', (req,res) => {
+  console.log("Start of get")
   //Puts dictionary into a list to be displayed
   tempStorage = []
 
@@ -53,7 +58,9 @@ app.post("/item/",
     body("lat").notEmpty(),
     body("lon").notEmpty(),
     function (req, res) {
+      console.log("Start of post")
     if(validationResult(req).isEmpty()){
+      console.log("Start of empty")
       //Line taken from Resource 3 to get the max index on the array
       var itemsTopIndex = Math.max.apply(null, Object.keys(items))
       var nextID = itemsTopIndex + 1
@@ -72,6 +79,7 @@ app.post("/item/",
         date_from: date ,
         date_to: date
       }
+      console.log("post")
       res.status(201).json(items[nextID])
     }
     else {   

@@ -19,10 +19,10 @@
                 <input v-model="item.description" name="description" type="text" placeholder="Description here">
                 <input v-model="item.image" name="image" type="text" placeholder="Image here">
                 <input v-model="item.lat" name="lat" type="text" placeholder="Lat here">
-                <input v-model="item.long" name="long" type="text" placeholder="Long here">
+                <input v-model="item.lon" name="lon" type="text" placeholder="Lon here">
                 <button>Submit</button>
             </form>
-
+            <h2>List</h2>
         <ul>
             <li v-for="item in items">
               <span>{{item.id}}</span>
@@ -36,7 +36,6 @@
               <span>{{item.date_to}}</span>
               <button @click="deleteItem(item.id)">Delete</button>
             </li>
-
           </ul>
 
     </div>
@@ -80,9 +79,6 @@ createApp({
                 image: '',
                 lat: '',
                 lon: '',
-                id: Math.random(),
-                date_from: Date(),
-                date_to: Date()
             }}
         },
         getItems() {
@@ -95,9 +91,9 @@ createApp({
         },
         addItem(){
             fetch(`${urlAPI}/item`, {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(this.item),
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(this.item),
             })
                 .then(response => response.json())
                 .then(json => console.log('createItems()', json))
