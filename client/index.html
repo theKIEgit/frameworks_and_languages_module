@@ -67,12 +67,9 @@
 
  const { createApp } = Vue
  
- //perma link here
- const url = window.location.href;
-    const replacement = url.split('a').pop();
-    const Params = replacement.split('?')[0];
-    const urlAPI = "https://8000-thekiegit-frameworksand/";
-    const result = urlAPI.concat(Params);
+ const DEFAULT_API = '/api/v1';  // default to current http(s)://currentHost:currentPort/api/v1'
+ const urlParams = new URLSearchParams(window.location.search);
+ const urlAPI = (urlParams.get('api') || DEFAULT_API).replace(/\/$/, '');  // Get api url (and remove trailing slash if present)
 
 
 createApp({
