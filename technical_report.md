@@ -134,12 +134,37 @@ Client Language Features
 Critique of Server/Client prototype
 ---------------------
 
-### (name of Issue 1)
+### index.html Fragmented
 
-(A code snippet example demonstrating the feature - 1 mark)
-(Explain why this pattern is problematic - 40ish words 1 mark)
 
-### (name of Issue 2)
+```js
+	function render_items(params) {
+		fetch(`${urlAPI}/items?${new URLSearchParams(params).toString()}`)
+			.then(response => response.json())
+			.then(renderItems)
+		.catch(err => console.error(err));
+	}
+```
+```js
+	function renderItems(data) {
+		const $item_list = document.querySelector(`[data-page="items"] ul`);
+		const new_item_element = () => document.querySelector(`[data-page="items"] li`).cloneNode(true);
+
+		for (let item_data of data) {
+			const $new_item_element = new_item_element();
+			$item_list.appendChild($new_item_element);
+			renderDataToTemplate(item_data, $new_item_element, renderItemListFieldLookup);
+			attachDeleteAction($new_item_element);
+		}
+	}
+```
+The above shows the rendering in the prototype fragmented across multiple functions, this is a bad practice as it makes the program harder to be read and iterated upon overall wasting time, instead all functions related should be grouped as one.
+
+### Server cors usage
+
+```js
+'Access-Control-Allow-Origin': '*',
+```
 
 (A code snippet example demonstrating the feature - 1 mark)
 (Explain why this pattern is problematic - 40ish words 1 mark)
