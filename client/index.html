@@ -13,7 +13,8 @@
 </head>
 <body>
     <div id="app" class="container">
-            <form @submit.prevent="addItem">
+        <h2>freecycle</h2>
+            <form @submit.prevent="create_item" data-action="create_item">
                 <input v-model="item.user_id" name="user_id" type="text" placeholder="User ID here">
                 <input v-model="item.keywords" name="keywords" type="text" placeholder="Keywords here">
                 <input v-model="item.description" name="description" type="text" placeholder="Description here">
@@ -92,7 +93,7 @@ createApp({
             .then(data => this.items = data)
         .catch(err => console.error(err))
         },
-        addItem(){
+        create_item(){
             fetch(`${urlAPI}/item`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
