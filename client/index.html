@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="main" class="container">
+    <div id="app" class="container">
         <h1>Form</h1>
         <form class="row g-3">
             <div class="col-md-6">
@@ -37,7 +37,7 @@
               </div>
             <div class="col-md-6">
                 <label for="inputLongitude" class="form-label">Longitude</label>
-                <input type="text" class="form-control" name="long" id="inputLongitude" placeholder="Longitude">
+                <input type="text" class="form-control" name="lon" id="inputLongitude" placeholder="Longitude">
             </div>
             <div class="col-12">
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -54,7 +54,7 @@
               <span>{{item.description}}</span>
               <span>{{item.image}}</span>
               <span>{{item.lat}}</span>
-              <span>{{item.long}}</span>
+              <span>{{item.lon}}</span>
               <span>{{item.date_from}}</span>
               <button @click="deleteItem(item.id)">Delete</button>
             </li>
@@ -67,11 +67,12 @@
 
  const { createApp } = Vue
  
- const DEFAULT_API = '/api/v1';  // default to current http(s)://currentHost:currentPort/api/v1'
- const urlParams = new URLSearchParams(window.location.search);
- const urlAPI = (urlParams.get('api') || DEFAULT_API).replace(/\/$/, '');  // Get api url (and remove trailing slash if present)
- 
- //let urlAPI = ''
+ //perma link here
+ const url = window.location.href;
+    const replacement = url.split('a').pop();
+    const Params = replacement.split('?')[0];
+    const urlAPI = "https://8000-thekiegit-frameworksand/";
+    const result = urlAPI.concat(Params);
 
 
 createApp({
@@ -84,14 +85,11 @@ createApp({
                 description: '',
                 image: '',
                 lat: '',
-                long: '',
+                lon: '',
                 date_from: '',
             },
-            items: {
-                0:{}
-            }
+            items: []
         }
-        Next_Id = max(items.keys()) + 1
     },
     created(){
         this.clearItem()
@@ -105,7 +103,7 @@ createApp({
                 description: '',
                 image: '',
                 lat: '',
-                long: '',
+                lon: '',
                 id: Math.random(),
                 date_from: Date()
             }}
