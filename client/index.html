@@ -73,12 +73,15 @@ createApp({
     methods: {
         clearItem(){
             this.item = {...this.item, ...{
+                id: Math.random(),
                 user_id: '',
                 keywords: '',
                 description: '',
                 image: '',
                 lat: '',
                 lon: '',
+                date_from: Date(),
+                date_from: Date()
             }}
         },
         getItems() {
