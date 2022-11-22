@@ -64,7 +64,6 @@ app.post("/item/",
       //Line taken from Resource 3 to get the max index on the array
       var itemsTopIndex = Math.max.apply(null, Object.keys(items))
       var nextID = itemsTopIndex + 1
-      
       if (nextID == "-Infinity"){
         nextID = 0
       }
