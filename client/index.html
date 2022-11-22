@@ -5,9 +5,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Assignment</title>
     <style>
-
-    /* styles here */
-
+        ul{    
+            list-style: none;
+            padding-left: 0;
+        }
     </style>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
@@ -45,19 +46,30 @@
         </form>
             <h2>List</h2>
         <ul>
-            <li v-for="item in items">
-              <span data-field="id">{{item.id}}</span>
-              <span>{{item.user_id}}</span>
-              <span>{{item.keywords}}</span>
-              <span>{{item.description}}</span>
-              <span>{{item.image}}</span>
-              <span>{{item.lat}}</span>
-              <span>{{item.lon}}</span>
-              <span>{{item.date_from}}</span>
-              <span>{{item.date_to}}</span>
-              <button @click="deleteItem(item.id)" data-action="delete">Delete</button>
+            <li class="list-group-item" v-for="item in items">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img class="card-img h-90" :src="item.image"  alt="Card image cap"/>
+                        <p class="card-text">Image URL: {{item.image}}</p>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 data-field="id" class="card-title">ID: {{item.id}}</h5>
+                            <p class="card-text">User ID: {{item.user_id}}</p>
+                            <p class="card-text">Keywords: {{item.keywords}}</p>
+                            <p class="card-text">Description: {{item.description}}</p>
+                            <p class="card-text">Lat: {{item.lat}}</p>
+                            <p class="card-text">Lon: {{item.lon}}</p>
+                            <p class="card-text">Date From: {{item.date_from}}</p>
+                            <p class="card-text">Date To: {{item.date_to}}</p>
+                            <button @click="deleteItem(item.id)" data-action="delete" class="btn btn-primary">Delete</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
             </li>
-          </ul>
+        </ul>
 
     </div>
 
@@ -100,8 +112,6 @@ createApp({
                 image: '',
                 lat: '',
                 lon: '',
-                date_from: Date(),
-                date_from: Date()
             }}
         },
         getItems() {
