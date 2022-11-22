@@ -64,9 +64,15 @@ app.post("/item/",
       //Line taken from Resource 3 to get the max index on the array
       var itemsTopIndex = Math.max.apply(null, Object.keys(items))
       var nextID = itemsTopIndex + 1
-      //add reference link for date//
+      
+      if (nextID == "-Infinity"){
+        nextID = 0
+      }
       var date = new Date().toJSON().slice(0,10)
 
+      console.log(itemsTopIndex)
+      console.log(nextID)
+      
       //New item object, dates are generated
       items[nextID] = {
         id: nextID,
