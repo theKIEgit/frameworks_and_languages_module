@@ -14,15 +14,35 @@
 <body>
     <div id="app" class="container">
         <h2>freecycle</h2>
-            <form @submit.prevent="create_item" data-action="create_item">
-                <input v-model="item.user_id" name="user_id" type="text" placeholder="User ID here">
-                <input v-model="item.keywords" name="keywords" type="text" placeholder="Keywords here">
-                <input v-model="item.description" name="description" type="text" placeholder="Description here">
-                <input v-model="item.image" name="image" type="text" placeholder="Image here">
-                <input v-model="item.lat" name="lat" type="text" placeholder="Lat here">
-                <input v-model="item.lon" name="lon" type="text" placeholder="Lon here">
-                <button>Submit</button>
-            </form>
+        <form @submit.prevent="create_item" data-action="create_item" class="row g-3">
+            <div class="col-md-6">
+                <label for="inputUserID" class="form-label">User ID</label>
+                <input v-model="item.user_id" type="text" class="form-control" name="user_id" id="inputUserID" placeholder="User ID">
+              </div>
+              <div class="col-6">
+                <label for="inputImage" class="form-label">Image</label>
+                <input v-model="item.image" type="text" class="form-control" name="image" id="inputImage" placeholder="Image url">
+              </div>
+              <div class="col-6">
+                  <label for="inputDescription" class="form-label">Description</label>
+                  <textarea v-model="item.description" class="form-control" name="description" v-model="description" placeholder="Description"></textarea>
+              </div>
+              <div class="col-6">
+                  <label for="inputKeywords" class="form-label">Keywords</label>
+                  <textarea  v-model="item.keywords" class="form-control" name="keywords" v-model="keywords" placeholder="Keywords"></textarea>
+              </div>
+              <div class="col-md-6">
+                  <label for="inputLatitude" class="form-label">Latitude</label>
+                  <input v-model="item.lat" type="text" class="form-control" name="lat" id="inputLatitude" placeholder="Latitude">
+                </div>
+              <div class="col-md-6">
+                  <label for="inputLongitude" class="form-label">Longitude</label>
+                  <input v-model="item.lon" type="text" class="form-control" name="long" id="inputLongitude" placeholder="Longitude">
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary">Submit</button>
+              </div>
+        </form>
             <h2>List</h2>
         <ul>
             <li v-for="item in items">
@@ -74,15 +94,12 @@ createApp({
     methods: {
         clearItem(){
             this.item = {...this.item, ...{
-                id: Math.random(),
                 user_id: '',
                 keywords: '',
                 description: '',
                 image: '',
                 lat: '',
                 lon: '',
-                date_from: Date(),
-                date_from: Date()
             }}
         },
         getItems() {
