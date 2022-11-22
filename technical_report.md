@@ -70,12 +70,20 @@ https://expressjs.com/en/guide/using-template-engines.html
 Server Language Features
 -----------------------
 
-### (name of Feature 1)
+### Error Handling
 
-(Technical description of the feature - 40ish words - 1 mark)
-(A code block snippet example demonstrating the feature - 1 mark)
-(Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
-(Provide reference urls to your sources of information about the feature - required)
+Express has a default handler middleware to make assertions that can be used to catch and handle different errors in different ways while preventing crashing.
+
+```js
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+})
+```
+
+Handling errors properly means finding bugs can be quicker but also makes the program more robust, allowing the program to stay running when interrupted. Express benefits by having built-in error handling at the end of the middleware stack reducing bulky try/catch blocks.
+
+[Express js error handling](https://expressjs.com/en/guide/error-handling.html)
 
 
 ### (name of Feature 2)
