@@ -86,12 +86,24 @@ Handling errors properly means finding bugs can be quicker but also makes the pr
 [Express js error handling](https://expressjs.com/en/guide/error-handling.html)
 
 
-### (name of Feature 2)
+### .Filter
 
-(Technical description of the feature - 40ish words - 1 mark)
-(A code block snippet example demonstrating the feature - 1 mark)
+This creates a shallow copy () of an array and filters the elements that pass a defined test, the original array is not altered by using this function alone. - Needs to be more technical
+
+```js
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+```
+This removes the need for large for loops to search the elements of an array condensing the process down to one line. - Needs to be more technical
+
 (Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
-(Provide reference urls to your sources of information about the feature - required)
+
+[Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+[Shallow Copy](https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy)
 
 
 Client Framework Features
