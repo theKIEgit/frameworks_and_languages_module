@@ -193,21 +193,21 @@ The above shows the rendering in the prototype fragmented across multiple functi
 Future Technology Suggestions
 -----------------------------
 
-### (name of technology/feature 1)
+### Serverless Architecture
+
+This is a way to build and run functions without having to manage it's infrastructure when the function is called the provider will create an instance on the closest possible server meaning that there will be a lower latency and can can be scaled automatically, however there is no control over the infrastructure so if there is an outage you have to wait for the provider to fix it and it's hard to change provider as it uses a certain language that other providers won't support. 
+
+[Serverless Architecture](https://aws.amazon.com/lambda/serverless-architectures-learn-more/)
+
+[Serverless Architecture Overview](https://www.datadoghq.com/knowledge-center/serverless-architecture/)
+
+### GraphQL
 
 (Description of a feature or tool - 40ish words - 1 mark)
 (Why/benefits/problems with using this - 40ish words - 1 mark)
 (Provide reference urls to your source of information about this technology - required)
 
-
-### (name of technology/feature 2)
-
-(Description of a feature or tool - 40ish words - 1 mark)
-(Why/benefits/problems with using this - 40ish words - 1 mark)
-(Provide reference urls to your source of information about this technology - required)
-
-
-### (name of technology/feature 3)
+### Static Site Generation
 
 (Description of a feature or tool - 40ish words - 1 mark)
 (Why/benefits/problems with using this - 40ish words - 1 mark)
