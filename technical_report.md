@@ -8,7 +8,6 @@ Server Framework Features
 -------------------------
 
 ### (Routing)
-(Redo this gibberish)
 The routing feature allows defined URL endings alongside specified http requests to be linked to a specific function, each route can have multiple http requests and therefore have multiple functionalities linked to a matched URL.
 
 ```js
@@ -25,7 +24,6 @@ Routing is beneficial as it enables us to create modular route handlers which is
 https://expressjs.com/en/guide/routing.html
 
 ### (Middleware)
-(Redo this gibberish)
 Middleware are functions that have access to the req and res in an application, it is executed after the server receives a request and before a response is sent.
 Express is constructed on multiple middleware functions stringed together.
 
@@ -109,12 +107,26 @@ This removes the need for large for loops to search the elements of an array con
 Client Framework Features
 -------------------------
 
-### (name of Feature 1)
+### Text Interpolation
 
-(Technical description of the feature - 40ish words - 1 mark)
-(A code block snippet example demonstrating the feature - 1 mark)
-(Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
-(Provide reference urls to your sources of information about the feature - required)
+Vue utilizes interpolation to insert data-bound variables into a HTML syntax by using the mustache syntax `{{Variable name}}` so it can be displayed, the variable can be updated and changed.
+
+```html
+<h5 data-field="id" class="card-title">ID: {{item.id}}</h5>
+<p class="card-text">User ID: {{item.user_id}}</p>
+<p class="card-text">Keywords: {{item.keywords}}</p>
+<p class="card-text">Description: {{item.description}}</p>
+<p class="card-text">Lat: {{item.lat}}</p>
+<p class="card-text">Lon: {{item.lon}}</p>
+<p class="card-text">Date From: {{item.date_from}}</p>
+<p class="card-text">Date To: {{item.date_to}}</p>
+```
+This allows for variables to be synchronized without needing extra functions to re-render the webpage ()Need to complete()
+
+https://vuejs.org/guide/essentials/template-syntax.html
+https://subscription.packtpub.com/book/web-development/9781838984823/1/ch01lvl1sec07/ 
+data-binding-syntax-using-interpolation
+https://medium.com/js-dojo/vue-js-cli3-interpolations-first-directives-javascript-in-the-html-template-and-binding-en-b01dc9bcaabe
 
 
 ### (name of Feature 2)
