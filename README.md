@@ -11,25 +11,30 @@ https://gitpod.io/#https://github.com/calaldees/frameworks_and_languages_module
 
 ## Running Client
 To run the client run these commands in order.
+First:
 ```console 
 cd client 
 ```
+Second:
 ```console
 make build 
- ```
+```
+Third:
 ```console
 make Run 
 ```
 
 ## Running Server
 To run the server run these commands in order.
-
+First:
 ```console 
 cd server 
 ```
+Second:
 ```console
 make build 
- ```
+```
+Third:
 ```console
 make Run 
 ```
