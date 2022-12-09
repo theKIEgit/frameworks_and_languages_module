@@ -10,7 +10,7 @@ https://gitpod.io/#https://github.com/calaldees/frameworks_and_languages_module
 # Running
 
 ## Running Client
-To run the client run these commands in order.
+To run the client run these commands in order.\
 First:
 ```console 
 cd client 
@@ -25,7 +25,7 @@ make Run
 ```
 
 ## Running Server
-To run the server run these commands in order.
+To run the server run these commands in order.\
 First:
 ```console 
 cd server 
@@ -49,8 +49,12 @@ To view the server and client connected use a query string ````?api=```` after t
 # Testing
 
 ## Server Testing
-To run all the server tests open a new terminal and run the following command after the server is running.
-
+To run all the server tests open a new terminal and run the following command after the server is running.\
+First:
+```console
+pip install pytest
+```
+Second:
 ```console
 pytest
 ```
