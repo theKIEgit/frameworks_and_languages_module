@@ -44,22 +44,7 @@ https://www.geeksforgeeks.org/middleware-in-express-js/
 
 
 
-### Templating
-
-A template allows static template files to be used in the application - Need to complete
-```html
-html
-  head
-    title= title
-  body
-    h1= message
-```
-
-```js
-app.get('/', (req, res) => {
-  res.render('index', { title: 'Hey', message: 'Hello there!' })
-})
-```
+### Templating q
 
 (Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
 (Provide reference urls to your sources of information about the feature - required)
@@ -84,7 +69,7 @@ Handling errors properly means finding bugs can be quicker but also makes the pr
 [Express js error handling](https://expressjs.com/en/guide/error-handling.html)
 
 
-### .Filter
+### .Filter q
 
 This creates a shallow copy () of an array and filters the elements that pass a defined test, the original array is not altered by using this function alone. - Needs to be more technical
 
@@ -106,7 +91,27 @@ This removes the need for large for loops to search the elements of an array con
 
 Client Framework Features
 -------------------------
+### Virtual DOM
 
+A virtual DOM will serve as the interface the user interacts with while the "Real DOM" is being updated with new data, A virtual DOM will be constantly synched with the "Real DOM" so that new data is synched and displayed.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+</body>
+</html>
+```
+
+The use of a Virtual DOM means that the data on the page can be updated and iterated upon without the need for complicated re-rendering functions in JavaScript
+
+(Rendereing Mechanism)[https://vuejs.org/guide/extras/rendering-mechanism.html]
+(How the virtual DOM works in Vue.js)[https://blog.logrocket.com/how-the-virtual-dom-works-in-vue-js/]
 ### Text Interpolation
 
 Vue utilizes interpolation to insert data-bound variables into a HTML syntax by using the mustache syntax `{{Variable name}}` so it can be displayed, the variable can be updated and changed.
@@ -121,28 +126,33 @@ Vue utilizes interpolation to insert data-bound variables into a HTML syntax by 
 <p class="card-text">Date From: {{item.date_from}}</p>
 <p class="card-text">Date To: {{item.date_to}}</p>
 ```
-This allows for variables to be synchronized without needing extra functions to re-render the webpage ()Need to complete()
+This allows for variables to be synchronized without needing extra functions to re-render the webpage.
 
 https://vuejs.org/guide/essentials/template-syntax.html
 https://subscription.packtpub.com/book/web-development/9781838984823/1/ch01lvl1sec07/ 
 data-binding-syntax-using-interpolation
 https://medium.com/js-dojo/vue-js-cli3-interpolations-first-directives-javascript-in-the-html-template-and-binding-en-b01dc9bcaabe
 
+### List rendering
 
-### (name of Feature 2)
+Vue can use the  v-for syntax to render a list from an array, objects and other storage mediums. "item in items" can be used to iterate through an "items" array to grab an "item" as an array element.
 
-(Technical description of the feature - 40ish words - 1 mark)
-(A code block snippet example demonstrating the feature - 1 mark)
-(Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
-(Provide reference urls to your sources of information about the feature - required)
+```html
+<li class="list-group-item" v-for="item in items">
 
+	<h5 data-field="id" class="card-title">ID: {{item.id}}</h5>
+	<p class="card-text">User ID: {{item.user_id}}</p>
+	<p class="card-text">Keywords: {{item.keywords}}</p>
+	<p class="card-text">Description: {{item.description}}</p>
+	<p class="card-text">Lat: {{item.lat}}</p>
+	<p class="card-text">Lon: {{item.lon}}</p>
+	<p class="card-text">Date From: {{item.date_from}}</p>
+	<p class="card-text">Date To: {{item.date_to}}</p>
+```
+Without this, a complicated javascript function will be needed with loops to iterate through a list to fetch the needed with vue this is reduced drastically.
 
-### (name of Feature 3)
-
-(Technical description of the feature - 40ish words - 1 mark)
-(A code block snippet example demonstrating the feature - 1 mark)
-(Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
-(Provide reference urls to your sources of information about the feature - required)
+(List)[https://vuejs.org/guide/essentials/list.html]
+(List Rendering)[https://www.w3resource.com/vue/list-rendering.php]
 
 
 Client Language Features
@@ -213,7 +223,7 @@ This is a way to build and run functions without having to manage it's infrastru
 
 [Serverless Architecture Overview](https://www.datadoghq.com/knowledge-center/serverless-architecture/)
 
-### GraphQL
+### NoSQL
 
 (Description of a feature or tool - 40ish words - 1 mark)
 (Why/benefits/problems with using this - 40ish words - 1 mark)
