@@ -226,15 +226,15 @@ This is a way to build and run functions without having to manage it's infrastru
 
 Static site generation is used to generate entire HTML pages by using cached templates that are compiled at build time on the server, this allows all content to be served on the first load without refreshes being needed to apply data each get request this also means there are less data channels susceptible to malicious attacks. however, this means the user is entirely reliant on the server to compile the sites, if their are server issues compile times can be high.
 
-(What is a Static Site Generator?)[https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/]
+[What is a Static Site Generator?](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/)
 
-(What is a static site generator? (2))[https://www.cloudflare.com/en-gb/learning/performance/static-site-generator/]
+[What is a static site generator? (2)](https://www.cloudflare.com/en-gb/learning/performance/static-site-generator/)
 
-(Static Site Generator)[https://www.gatsbyjs.com/docs/glossary/static-site-generator/]
+[Static Site Generator](https://www.gatsbyjs.com/docs/glossary/static-site-generator/)
 
-(Teleport)[https://teleporthq.io/blog/what-is-a-static-site-generator]
+[Teleport](https://teleporthq.io/blog/what-is-a-static-site-generator)
 
-(Why You Shouldn't Use a Static Site Generator)[https://www.getrevue.co/profile/masteringjs/issues/why-you-shouldn-t-use-a-static-site-generator-for-your-next-blog-292833]
+[Why You Shouldn't Use a Static Site Generator](https://www.getrevue.co/profile/masteringjs/issues/why-you-shouldn-t-use-a-static-site-generator-for-your-next-blog-292833)
 
 ### NoSQL
 
