@@ -108,10 +108,11 @@ A virtual DOM will serve as the interface the user interacts with while the "Rea
 </html>
 ```
 
-The use of a Virtual DOM means that the data on the page can be updated and iterated upon without the need for complicated re-rendering functions in JavaScript
+The use of a Virtual DOM means that the data on the page can be updated and iterated upon without the need for complicated re-rendering functions in JavaScript.
 
 (Rendereing Mechanism)[https://vuejs.org/guide/extras/rendering-mechanism.html]
 (How the virtual DOM works in Vue.js)[https://blog.logrocket.com/how-the-virtual-dom-works-in-vue-js/]
+
 ### Text Interpolation
 
 Vue utilizes interpolation to insert data-bound variables into a HTML syntax by using the mustache syntax `{{Variable name}}` so it can be displayed, the variable can be updated and changed.
@@ -129,8 +130,6 @@ Vue utilizes interpolation to insert data-bound variables into a HTML syntax by 
 This allows for variables to be synchronized without needing extra functions to re-render the webpage.
 
 https://vuejs.org/guide/essentials/template-syntax.html
-https://subscription.packtpub.com/book/web-development/9781838984823/1/ch01lvl1sec07/ 
-data-binding-syntax-using-interpolation
 https://medium.com/js-dojo/vue-js-cli3-interpolations-first-directives-javascript-in-the-html-template-and-binding-en-b01dc9bcaabe
 
 ### List rendering
@@ -223,14 +222,25 @@ This is a way to build and run functions without having to manage it's infrastru
 
 [Serverless Architecture Overview](https://www.datadoghq.com/knowledge-center/serverless-architecture/)
 
-### NoSQL
-
-(Description of a feature or tool - 40ish words - 1 mark)
-(Why/benefits/problems with using this - 40ish words - 1 mark)
-(Provide reference urls to your source of information about this technology - required)
-
 ### Static Site Generation
 
-(Description of a feature or tool - 40ish words - 1 mark)
-(Why/benefits/problems with using this - 40ish words - 1 mark)
-(Provide reference urls to your source of information about this technology - required)
+Static site generation is used to generate entire HTML pages by using cached templates that are compiled at build time on the server, this allows all content to be served on the first load without refreshes being needed to apply data each get request this also means there are less data channels susceptible to malicious attacks. however, this means the user is entirely reliant on the server to compile the sites, if their are server issues compile times can be high.
+
+(What is a Static Site Generator?)[https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/]
+
+(What is a static site generator? (2))[https://www.cloudflare.com/en-gb/learning/performance/static-site-generator/]
+
+(Static Site Generator)[https://www.gatsbyjs.com/docs/glossary/static-site-generator/]
+
+(Teleport)[https://teleporthq.io/blog/what-is-a-static-site-generator]
+
+(Why You Shouldn't Use a Static Site Generator)[https://www.getrevue.co/profile/masteringjs/issues/why-you-shouldn-t-use-a-static-site-generator-for-your-next-blog-292833]
+
+### NoSQL
+
+NoSQL is a non-relational data storage method, this method does not require a fixed data model like traditional SQL allowing for more flexible storage this is beneficial for large scaled systems that would traditionally require hundreds of keys and relationships. However NoSQL is denormalised meaning that data can be nested/repeated throughout the database this does increase the read speeds but also takes up more memory.
+
+(What Is NoSQL)[https://www.mongodb.com/nosql-explained]
+(NoSQL Databases)[https://www.couchbase.com/resources/why-nosql]
+(NOSQL DATABASES ARE THE PROBLEM, NOT THE SOLUTION)[https://mindmatters.ai/2022/01/nosql-databases-are-the-problem-not-the-solution/]
+(SQL versus NoSQL: Pros and Cons)[https://www.datastax.com/blog/sql-vs-nosql-pros-cons]
