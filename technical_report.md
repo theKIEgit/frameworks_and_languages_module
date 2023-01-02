@@ -56,6 +56,7 @@ doctype html
 	h1 Example!
 	p This is a Pug example.
 ```
+The generated HTML looks like:
 ```html
 <!DOCTYPE html>
   <head>
