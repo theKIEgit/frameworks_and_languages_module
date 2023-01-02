@@ -46,9 +46,34 @@ https://www.geeksforgeeks.org/middleware-in-express-js/
 
 ### Templating q
 
-(Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
-(Provide reference urls to your sources of information about the feature - required)
-https://expressjs.com/en/guide/using-template-engines.html
+Express js allows for tepmplate engines which use an algorithm on runtime to generate HTML dynamically that is then sent to the client. The most popular templates are EJS, Mustache and Pug, below is an example of pug.
+
+```html
+doctype html
+ head
+	title Hello, World!
+ body
+	h1 Example!
+	p This is a Pug example.
+```
+```html
+<!DOCTYPE html>
+  <head>
+    <title>Hello, World!</title>
+  </head>
+  <body>
+    <h1>Example!</h1>
+    <p>This is a Pug example.</p>
+  </body>
+</html>
+```
+Templates are used to streamline the creation of HTML pages by enabling developers to use consistent blocks across projects making these blocks reusable and easier for a human to read/ edit if needed.
+
+[using-template-engines](https://expressjs.com/en/guide/using-template-engines.html)
+
+[how-to-do-templating-using-expressjs](https://www.geeksforgeeks.org/how-to-do-templating-using-expressjs-in-node-js/)
+
+[a-beginners-guide-to-pug](https://www.sitepoint.com/a-beginners-guide-to-pug/)
 
 Server Language Features
 -----------------------
