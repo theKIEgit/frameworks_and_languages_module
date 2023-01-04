@@ -183,12 +183,31 @@ Without this, a complicated javascript function will be needed with loops to ite
 Client Language Features
 ------------------------
 
-### (name of Feature 1)
+### `this`
 
-(Technical description of the feature - 40ish words - 1 mark)
-(A code block snippet example demonstrating the feature - 1 mark)
-(Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
-(Provide reference urls to your sources of information about the feature - required)
+The use of `this` refers to an object that is running in the current block of code, if called within a function it binds the function to an object.
+
+```js
+public class Main { 
+  int x; 
+  // Constructor with a parameter
+  public Main(int x) { 
+    this.x = x;
+  } 
+  // Call the constructor
+  public static void main(String[] args)  { 
+    Main myObj = new Main(1000); 
+    System.out.println("x = " + myObj.x);
+  } 
+} 
+```
+`this` is mainly used in constructors to differentiate between a class attribute name when it is the same as a parameter.
+
+[What Does 'this' Mean in JavaScript?](https://www.freecodecamp.org/news/what-is-this-in-javascript/)
+
+[JavaScript “This” Keyword and How to Implement It](https://www.simplilearn.com/tutorials/javascript-tutorial/javascript-this-keyword)
+
+[Java this Keyword](https://www.w3schools.com/java/ref_keyword_this.asp)
 
 ### (name of Feature 2)
 
