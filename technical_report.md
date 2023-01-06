@@ -74,11 +74,11 @@ The generated HTML looks like:
 ```
 Templates are used to streamline the creation of HTML pages by enabling developers to use consistent blocks across projects making these blocks reusable and easier for a human to read/ edit if needed.
 
-[using-template-engines](https://expressjs.com/en/guide/using-template-engines.html)
+[Using template engines](https://expressjs.com/en/guide/using-template-engines.html)
 
-[how-to-do-templating-using-expressjs](https://www.geeksforgeeks.org/how-to-do-templating-using-expressjs-in-node-js/)
+[How to do templating using expressjs](https://www.geeksforgeeks.org/how-to-do-templating-using-expressjs-in-node-js/)
 
-[a-beginners-guide-to-pug](https://www.sitepoint.com/a-beginners-guide-to-pug/)
+[A beginners guide to pug](https://www.sitepoint.com/a-beginners-guide-to-pug/)
 
 Server Language Features
 -----------------------
@@ -160,8 +160,9 @@ Vue utilizes interpolation to insert data-bound variables into a HTML syntax by 
 ```
 This allows for variables to be synchronized without needing extra functions to re-render the webpage.
 
-https://vuejs.org/guide/essentials/template-syntax.html
-https://medium.com/js-dojo/vue-js-cli3-interpolations-first-directives-javascript-in-the-html-template-and-binding-en-b01dc9bcaabe
+[Template Syntax](https://vuejs.org/guide/essentials/template-syntax.html)
+
+[Interpolations](https://medium.com/js-dojo/vue-js-cli3-interpolations-first-directives-javascript-in-the-html-template-and-binding-en-b01dc9bcaabe)
 
 ### List rendering
 
@@ -181,8 +182,9 @@ Vue can use the  v-for syntax to render a list from an array, objects and other 
 ```
 Without this, a complicated javascript function will be needed with loops to iterate through a list to fetch the needed with vue this is reduced drastically.
 
-(List)[https://vuejs.org/guide/essentials/list.html]
-(List Rendering)[https://www.w3resource.com/vue/list-rendering.php]
+[List](https://vuejs.org/guide/essentials/list.html)
+
+[List Rendering](https://www.w3resource.com/vue/list-rendering.php)
 
 
 Client Language Features
@@ -327,7 +329,10 @@ Static site generation is used to generate entire HTML pages by using cached tem
 
 NoSQL is a non-relational data storage method, this method does not require a fixed data model like traditional SQL allowing for more flexible storage this is beneficial for large scaled systems that would traditionally require hundreds of keys and relationships. However NoSQL is denormalised meaning that data can be nested/repeated throughout the database this does increase the read speeds but also takes up more memory.
 
-(What Is NoSQL)[https://www.mongodb.com/nosql-explained]
-(NoSQL Databases)[https://www.couchbase.com/resources/why-nosql]
-(NOSQL DATABASES ARE THE PROBLEM, NOT THE SOLUTION)[https://mindmatters.ai/2022/01/nosql-databases-are-the-problem-not-the-solution/]
-(SQL versus NoSQL: Pros and Cons)[https://www.datastax.com/blog/sql-vs-nosql-pros-cons]
+[What Is NoSQL](https://www.mongodb.com/nosql-explained)
+
+[NoSQL Databases](https://www.couchbase.com/resources/why-nosql)
+
+[NOSQL DATABASES ARE THE PROBLEM, NOT THE SOLUTION](https://mindmatters.ai/2022/01/nosql-databases-are-the-problem-not-the-solution/)
+
+[SQL versus NoSQL: Pros and Cons](https://www.datastax.com/blog/sql-vs-nosql-pros-cons)
