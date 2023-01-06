@@ -28,19 +28,23 @@ Middleware are functions that have access to the req and res in an application, 
 Express is constructed on multiple middleware functions stringed together.
 
 ```js
-const exampleLogger = function (req, res, next) {
-  console.log('LOGGED')
-  next()
-}
-
-app.use(exampleLogger)
+app.get('/item/:id', (req,res) => {
+  var itemID = parseInt(req.params.id)
+  if(items.hasOwnProperty(itemID)){
+    res.json(items[itemID])
+  }
+  else{
+    res.status(404).send("Item not found")
+  }
+})
 ```
-Above is a simple Express middleware that will print LOGGED when a request is passed through in this case the middleware has been assigned the name exampleLogger
+Request and response methods allow us to perform different tasks like error control, routing and cors are some examples.
 
-### Add uses/ benefits ^
+[What is middleware](https://aws.amazon.com/what-is/middleware/)
 
-https://aws.amazon.com/what-is/middleware/
-https://www.geeksforgeeks.org/middleware-in-express-js/
+[Middleware in express js](https://www.geeksforgeeks.org/middleware-in-express-js/)
+
+[Using middleware](https://expressjs.com/en/guide/using-middleware.html)
 
 
 
@@ -95,9 +99,9 @@ Handling errors properly means finding bugs can be quicker but also makes the pr
 [Express js error handling](https://expressjs.com/en/guide/error-handling.html)
 
 
-### .Filter q
+### .Filter
 
-This creates a shallow copy () of an array and filters the elements that pass a defined test, the original array is not altered by using this function alone. - Needs to be more technical
+This creates a shallow copy () of an array and filters the elements that pass a defined test, the original array is not altered by using this function alone.
 
 ```js
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
@@ -107,11 +111,11 @@ const result = words.filter(word => word.length > 6);
 console.log(result);
 // expected output: Array ["exuberant", "destruction", "present"]
 ```
-This removes the need for large for loops to search the elements of an array condensing the process down to one line. - Needs to be more technical
+This removes the need for large for loops to search the elements of an array condensing the process down to one line.
 
-(Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
 
 [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
 [Shallow Copy](https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy)
 
 
@@ -136,8 +140,9 @@ A virtual DOM will serve as the interface the user interacts with while the "Rea
 
 The use of a Virtual DOM means that the data on the page can be updated and iterated upon without the need for complicated re-rendering functions in JavaScript.
 
-(Rendereing Mechanism)[https://vuejs.org/guide/extras/rendering-mechanism.html]
-(How the virtual DOM works in Vue.js)[https://blog.logrocket.com/how-the-virtual-dom-works-in-vue-js/]
+[Rendereing Mechanism](https://vuejs.org/guide/extras/rendering-mechanism.html)
+
+[How the virtual DOM works in Vue.js](https://blog.logrocket.com/how-the-virtual-dom-works-in-vue-js/)
 
 ### Text Interpolation
 
@@ -262,14 +267,35 @@ Critique of Server/Client prototype
 ```
 The above shows the rendering in the prototype fragmented across multiple functions, this is a bad practice as it makes the program harder to be read and iterated upon overall wasting time, instead all functions related should be grouped as one.
 
-### Server cors usage
+### HTTP Response
 
-```js
-'Access-Control-Allow-Origin': '*',
+```py
+RESPONSE_CODES = {
+    200: 'OK',
+    201: 'Created',
+    204: 'No Content',
+    301: 'Moved Permanently',
+    304: 'Not Modified',
+    400: 'Bad Request',
+    401: 'Unauthorized',
+    403: 'Forbidden',
+    404: 'Not Found',
+    405: 'Method Not Allowed',
+    500: 'Internal Server Error',
+    501: 'Not Implemented',
+}
 ```
+The list of HTTP responses provided is far from complete only 14 of the main 16 codes are listed, with this method handling responses will cause errors when provided with an unlisted response, it would be better to make this dynamic as this will future proof the system and reduce the programs complexity, find below some examples of missing responses (From HTTP Status Codes):
 
-(A code snippet example demonstrating the feature - 1 mark)
-(Explain why this pattern is problematic - 40ish words 1 mark)
+- 302: Temporary Redirect
+- 408: Request Timeout
+- 410: Gone
+- 500: Internal Server Error
+- 503: Service Unavailabl
+
+[HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+[HTTP Status Codes](https://moz.com/learn/seo/http-status-codes)
 
 
 Future Technology Suggestions
