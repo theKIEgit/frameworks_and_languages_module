@@ -226,8 +226,11 @@ public class Main {
 JavaScript is a synchronous language so programs run line by line making use of asynchronous allows the program to handle tasks like API requests and still be responsive.
 
 [Promise.prototype.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
+
 [Understanding the Async in JavaScript](https://www.geeksforgeeks.org/understanding-the-async-in-javascript/)
+
 [Why we use then() method in JavaScript ?](https://www.geeksforgeeks.org/why-we-use-then-method-in-javascript/)
+
 [Promise](https://javascript.info/promise-basics)
 
 Critique of Server/Client prototype
