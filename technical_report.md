@@ -209,13 +209,26 @@ public class Main {
 
 [Java this Keyword](https://www.w3schools.com/java/ref_keyword_this.asp)
 
-### (name of Feature 2)
+### `then` 
+`then` is used to handle asynchronous tasks by scheduling call-back functions. `then` works by making a `new promise` when these are created an executor attempts to perform a task and returns resolved if done or rejected if there was an error.
 
-(Technical description of the feature - 40ish words - 1 mark)
-(A code block snippet example demonstrating the feature - 1 mark)
-(Explain the problem-this-is-solving/why/benefits/problems - 40ish words - 1 mark)
-(Provide reference urls to your sources of information about the feature - required)
+```js
+        getItems() {
+            fetch(`${urlAPI}/items`, {
+            method: 'GET',
+            })
+            .then(response => response.json())
+            .then(data => this.items = data)
+        .catch(err => console.error(err))
+        },
+```
 
+JavaScript is a synchronous language so programs run line by line making use of asynchronous allows the program to handle tasks like API requests and still be responsive.
+
+[Promise.prototype.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
+[Understanding the Async in JavaScript](https://www.geeksforgeeks.org/understanding-the-async-in-javascript/)
+[Why we use then() method in JavaScript ?](https://www.geeksforgeeks.org/why-we-use-then-method-in-javascript/)
+[Promise](https://javascript.info/promise-basics)
 
 Critique of Server/Client prototype
 ---------------------
