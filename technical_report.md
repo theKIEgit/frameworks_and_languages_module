@@ -7,7 +7,7 @@ Server Framework Features
 -------------------------
 
 ### Routing
-The routing feature allows defined URL endings alongside specified http requests to be linked to a specific function, each route can have multiple http requests and therefore have multiple functionalities linked to a matched URL.
+The routing feature allows defined URL endings alongside specified HTTP requests to be linked to a specific function, each route can have multiple HTTP requests and therefore have multiple functionalities linked to a matched URL.
 
 ```js
 const express = require('express')
@@ -18,7 +18,7 @@ app.get('/hello', (req, res) => {
   res.send('hello world')
 ```
 
-Routing is beneficial as it enables us to create modular route handlers which is helpful for managing the structure of an application. The example above shows the response for /hello.
+Routing is beneficial as it enables us to create modular route handlers which are helpful for managing the structure of an application. The example above shows the response for /hello.
 
 [Routing](https://expressjs.com/en/guide/routing.html)
 
@@ -49,7 +49,7 @@ Request and response methods allow us to perform different tasks like error cont
 
 ### Templating
 
-Express js allows for tepmplate engines which use an algorithm on runtime to generate HTML dynamically by assigning variables within the template with usable values that is then sent to the client. The most popular templates are EJS, Mustache and Pug, below is an example of pug.
+Express js allows for template engines which use an algorithm on runtime to generate HTML dynamically by assigning variables within the template with usable values that are then sent to the client. The most popular templates are EJS, Mustache and Pug, below is an example of pug.
 
 ```html
 doctype html
@@ -292,7 +292,7 @@ The list of HTTP responses provided is far from complete only 14 of the main 16 
 - 408: Request Timeout
 - 410: Gone
 - 500: Internal Server Error
-- 503: Service Unavailabl
+- 503: Service Unavailable
 
 [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
@@ -304,7 +304,7 @@ Future Technology Suggestions
 
 ### Serverless Architecture
 
-This is a way to build and run functions without having to manage it's infrastructure when the function is called the provider will create an instance on the closest possible server meaning that there will be a lower latency and can can be scaled automatically, however there is no control over the infrastructure so if there is an outage you have to wait for the provider to fix it and it's hard to change provider as it uses a certain language that other providers won't support. 
+This is a way to build and run functions without having to manage its infrastructure when the function is called the provider will create an instance on the closest possible server meaning that there will be a lower latency and can be scaled automatically, however there is no control over the infrastructure so if there is an outage you have to wait for the provider to fix it and it's hard to change provider as it uses a certain language that other providers won't support.
 
 [Serverless Architecture](https://aws.amazon.com/lambda/serverless-architectures-learn-more/)
 
@@ -312,7 +312,7 @@ This is a way to build and run functions without having to manage it's infrastru
 
 ### Static Site Generation
 
-Static site generation is used to generate entire HTML pages by using cached templates that are compiled at build time on the server, this allows all content to be served on the first load without refreshes being needed to apply data each get request this also means there are less data channels susceptible to malicious attacks. however, this means the user is entirely reliant on the server to compile the sites, if their are server issues compile times can be high.
+Static site generation is used to generate entire HTML pages by using cached templates that are compiled at build time on the server, this allows all content to be served on the first load without refreshes being needed to apply data each get request this also means there are fewer data channels susceptible to malicious attacks. however, this means the user is entirely reliant on the server to compile the sites, if there are server issues compile times can be high.
 
 [What is a Static Site Generator?](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/)
 
@@ -326,7 +326,7 @@ Static site generation is used to generate entire HTML pages by using cached tem
 
 ### NoSQL
 
-NoSQL is a non-relational data storage method, this method does not require a fixed data model like traditional SQL allowing for more flexible storage this is beneficial for large scaled systems that would traditionally require hundreds of keys and relationships. However NoSQL is denormalised meaning that data can be nested/repeated throughout the database this does increase the read speeds but also takes up more memory.
+NoSQL is a non-relational data storage method, this method does not require a fixed data model like traditional SQL allowing for more flexible storage this is beneficial for large scaled systems that would traditionally require hundreds of keys and relationships. However, NoSQL is de-normalised  meaning that data can be nested/repeated throughout the database this does increase the read speeds but also takes up more memory.
 
 [What Is NoSQL](https://www.mongodb.com/nosql-explained)
 
