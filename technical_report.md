@@ -47,7 +47,7 @@ Request and response methods allow us to perform different tasks like error cont
 
 
 
-### Templating q
+### Templating
 
 Express js allows for tepmplate engines which use an algorithm on runtime to generate HTML dynamically that is then sent to the client. The most popular templates are EJS, Mustache and Pug, below is an example of pug.
 
