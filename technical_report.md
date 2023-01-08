@@ -6,7 +6,7 @@ This technical report has been created to provide justification for features fro
 Server Framework Features
 -------------------------
 
-### (Routing)
+### Routing
 The routing feature allows defined URL endings alongside specified http requests to be linked to a specific function, each route can have multiple http requests and therefore have multiple functionalities linked to a matched URL.
 
 ```js
@@ -22,7 +22,7 @@ Routing is beneficial as it enables us to create modular route handlers which is
 
 [Routing](https://expressjs.com/en/guide/routing.html)
 
-### (Middleware)
+### Middleware
 Middleware are functions that have access to the req and res in an application, it is executed after the server receives a request and before a response is sent.
 Express is constructed on multiple middleware functions stringed together.
 
@@ -49,7 +49,7 @@ Request and response methods allow us to perform different tasks like error cont
 
 ### Templating
 
-Express js allows for tepmplate engines which use an algorithm on runtime to generate HTML dynamically that is then sent to the client. The most popular templates are EJS, Mustache and Pug, below is an example of pug.
+Express js allows for tepmplate engines which use an algorithm on runtime to generate HTML dynamically by assigning variables within the template with usable values that is then sent to the client. The most popular templates are EJS, Mustache and Pug, below is an example of pug.
 
 ```html
 doctype html
@@ -100,7 +100,7 @@ Handling errors properly means finding bugs can be quicker but also makes the pr
 
 ### .Filter
 
-This creates a shallow copy () of an array and filters the elements that pass a defined test, the original array is not altered by using this function alone.
+This creates a shallow copy (has the same contents as the original) of an array and filters the elements that pass a defined test, the original array is not altered by using this function alone.
 
 ```js
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
@@ -110,7 +110,7 @@ const result = words.filter(word => word.length > 6);
 console.log(result);
 // expected output: Array ["exuberant", "destruction", "present"]
 ```
-This removes the need for large for loops to search the elements of an array condensing the process down to one line.
+This removes the need for large for loops to search the elements of an array condensing the process down to one line, the use of a shallow copy means the filter can run with multiple variables as the original array will never be altered by the filter.
 
 
 [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
@@ -207,7 +207,7 @@ public class Main {
   } 
 } 
 ```
-`this` is mainly used in constructors to differentiate between a class attribute name when it is the same as a parameter.
+`this` is mainly used in constructors to differentiate between a class attribute name when it is the same as a parameter, to elaborate the use of `var` will set a variable to be globally available when using a variable with an identical identifier inside a function `this` can be used to get the variable from within the function and not the global variant.
 
 [What Does 'this' Mean in JavaScript?](https://www.freecodecamp.org/news/what-is-this-in-javascript/)
 
