@@ -1,8 +1,7 @@
 Technical Report
 ================
 
-(intro)
-
+This technical report has been created to provide justification for features from our chosen language and framework in our prototype as well as explain the benefits of using a framework to develop software over starting from nothing. Future technologies have been outlined that could be used in the development of FreeCycles's software.
 
 Server Framework Features
 -------------------------
