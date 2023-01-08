@@ -20,7 +20,7 @@ app.get('/hello', (req, res) => {
 
 Routing is beneficial as it enables us to create modular route handlers which is helpful for managing the structure of an application. The example above shows the response for /hello.
 
-https://expressjs.com/en/guide/routing.html
+[Routing](https://expressjs.com/en/guide/routing.html)
 
 ### (Middleware)
 Middleware are functions that have access to the req and res in an application, it is executed after the server receives a request and before a response is sent.
